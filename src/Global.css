@@ -3,38 +3,38 @@
 
 @font-face {
     font-family: 'satoshi';
-    src: url('fonts/Satoshi-Regular.woff2'),
-    url('fonts/Satoshi-Regular.woff');
+    src: url('/fonts/Satoshi-Regular.woff2') format('woff2'),
+    url('/fonts/Satoshi-Regular.woff');
 }
 
 @font-face {
     font-family:'satoshi-Medium';
-    src: url('fonts/Satoshi-Medium.woff2'),
-    url('/publiSatoshi-Medium.woff');
+    src: url('/fonts/Satoshi-Medium.woff2') format('woff2'),
+    url('/publiSatoshi-Medium.woff') format('woff');
 }
 
 @font-face {
     font-family: 'satoshi-italic';
-    src: url('fonts/Satoshi-Italic.woff2'),
-    url('fonts/Satoshi-Italic.woff');
+    src: url('/fonts/Satoshi-Italic.woff2') format('woff2'),
+    url('/fonts/Satoshi-Italic.woff') format('woff');
 }
 
 @font-face {
     font-family: 'satoshi-black';
-    src: url('fonts/Satoshi-Black.woff2'),
-    url('fonts/Satoshi-Black.woff');
+    src: url('/fonts/Satoshi-Black.woff2') format('woff2'),
+    url('/fonts/Satoshi-Black.woff') format('woff');
 }
 
 @font-face {
     font-family: 'satoshi-bold';
-    src: url('fonts/Satoshi-Bold.woff2'),
-    url('fonts/Satoshi-Bold.woff');
+    src: url('/fonts/Satoshi-Bold.woff2') format('woff2'),
+    url('/fonts/Satoshi-Bold.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'Neue_Montreal';
-    src: url('fonts/neuemontreal-regular-webfont.woff2'),
-    url('fonts/neuemontreal-regular-webfont.woff');
+    font-family: 'Neue_Montreal'; 
+    src: url('/fonts/neuemontreal-regular-webfont.woff2') format('woff2'),
+    url('/fonts/neuemontreal-regular-webfont.woff') format('woff');
 }
 
 :root{
