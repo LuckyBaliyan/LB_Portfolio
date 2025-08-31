@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+
+@font-face {
+    font-family: 'satoshi';
+    src: url('fonts/Satoshi-Regular.woff2'),
+    url('fonts/Satoshi-Regular.woff');
+}
+
+@font-face {
+    font-family:'satoshi-Medium';
+    src: url('fonts/Satoshi-Medium.woff2'),
+    url('/publiSatoshi-Medium.woff');
+}
+
+@font-face {
+    font-family: 'satoshi-italic';
+    src: url('fonts/Satoshi-Italic.woff2'),
+    url('fonts/Satoshi-Italic.woff');
+}
+
+@font-face {
+    font-family: 'satoshi-black';
+    src: url('fonts/Satoshi-Black.woff2'),
+    url('fonts/Satoshi-Black.woff');
+}
+
+@font-face {
+    font-family: 'satoshi-bold';
+    src: url('fonts/Satoshi-Bold.woff2'),
+    url('fonts/Satoshi-Bold.woff');
+}
+
+@font-face {
+    font-family: 'Neue_Montreal';
+    src: url('fonts/neuemontreal-regular-webfont.woff2'),
+    url('fonts/neuemontreal-regular-webfont.woff');
+}
+
+:root{
+  --baseBackground:#E8E8E3;
+  --HeadingsText:#080807;
+  --Dark:#000;
+  --semiDark:#393632;
+}
+
+body{
+    background-color:var(--baseBackground);
+    overflow-x: hidden;
+}
+
+
+@layer base{
+    section{
+        @apply w-full min-h-screen;
+    }
+    h1{
+        @apply text-[clamp(3rem,12vw,12rem)]  font-[satoshi-black] font-[900] leading-[0.9] tracking-tighter translate-y-[0%];
+    }
+    h2{
+        @apply text-[clamp(3rem,8vw,8rem)]  font-[satoshi-black] font-[900] leading-[0.9] md:tracking-tighter lg:tracking-[-9px] translate-y-[0%];
+    }
+    img{
+        @apply overflow-hidden object-cover;
+    }
+}
+
+
+@layer utilities{
+    .designer-span{
+        @apply text-sm inline-block font-[Neue_Montreal];
+    }
+    .mask{
+        @apply overflow-hidden;
+    }
+}

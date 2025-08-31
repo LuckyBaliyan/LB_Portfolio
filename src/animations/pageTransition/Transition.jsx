@@ -9,9 +9,10 @@ const Transition = (Page) => {
 
     const overlayRef = useRef(null);
     const textRef = useRef(null);
-    const [showContent,setShowContnet] = useState(false);
+    const [showContent,setShowContent] = useState(false);
 
     useGSAP(() => {
+
       const tl = gsap.timeline();
 
       tl.set(overlayRef.current, {
@@ -53,7 +54,7 @@ const Transition = (Page) => {
         ease: 'power4.inOut',
         delay: 0.1,
         onStart:()=>{
-            setShowContnet(true);
+            setShowContent(true);
         }
       },'a');
     }, []);
@@ -64,7 +65,7 @@ const Transition = (Page) => {
 
       <div
           ref={overlayRef}
-          className="w-full h-screen fixed top-0 left-0 z-[999] text-white bg-[#121212] flex justify-center items-center"
+          className="w-full h-screen fixed top-0 left-0 pointer-events-none z-[999] text-white bg-[#121212] flex justify-center items-center"
           style={{ transform: "scaleY(0)" }}
         >
           <h1 ref={textRef} className="text-white font-extrabold text-9xl">
