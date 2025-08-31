@@ -55,10 +55,10 @@ body{
         @apply w-full min-h-screen;
     }
     h1{
-        @apply text-[clamp(3rem,12vw,12rem)]  font-[satoshi-black] font-[900] leading-[0.9] tracking-tighter translate-y-[0%];
+        @apply text-[clamp(3rem,12vw,12rem)] text-[var(--HeadingsText)]  font-[satoshi-black] font-[900] leading-[0.9] tracking-tighter translate-y-[0%];
     }
     h2{
-        @apply text-[clamp(3rem,8vw,8rem)]  font-[satoshi-black] font-[900] leading-[0.9] md:tracking-[-7px] lg:tracking-[-9px] translate-y-[0%];
+        @apply text-9xl text-[var(--HeadingsText)]  font-[satoshi-black] font-[900] leading-[0.9] md:tracking-[-7px] lg:tracking-[-9px] translate-y-[0%];
     }
     img{
         @apply overflow-hidden object-cover;
