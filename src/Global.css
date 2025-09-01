@@ -47,6 +47,7 @@
   --HeadingsText:#080807;
   --Dark:#000;
   --semiDark:#393632;
+  --accent:#E63946;
 }
 
 body{
@@ -64,7 +65,7 @@ body{
         @apply w-full min-h-screen;
     }
     nav{
-        @apply w-full overflow-hidden py-2 px-6 flex justify-between;
+        @apply w-full overflow-hidden py-2 px-6 flex justify-between fixed top-0 left-0 z-[100];
     }
     h1{
         @apply text-[clamp(3rem,12vw,12rem)] text-[var(--HeadingsText)]  font-[satoshi-black] font-[900] leading-[0.9] tracking-tighter translate-y-[0%];
@@ -72,15 +73,22 @@ body{
     h2{
         @apply md:text-7xl lg:text-9xl text-[var(--HeadingsText)]  font-[satoshi-black] font-[900] leading-[0.9] md:tracking-[-7px] lg:tracking-[-9px] translate-y-[0%];
     }
+    p{
+        @apply font-[Neue_Montreal];
+    }
     img{
-        @apply overflow-y-hidden object-cover;
+        @apply overflow-y-hidden object-cover w-full h-full;
     }
     ul{
         @apply flex justify-evenly;
     }
 
     li{
-        @apply p-2 font-[Neue_Montreal] ;
+        @apply p-2 font-[Neue_Montreal];
+    }
+    button{
+        @apply px-8 py-3 bg-[var(--accent)] text-[var(--baseBackground)] 
+        cursor-pointer inset-0 border-0 rounded-full font-[satoshi-black];
     }
 }
 
@@ -100,6 +108,21 @@ body{
     }
     .link{
         @apply relative;
+    }
+    .greet{
+        @apply font-[Neue_Montreal] text-7xl font-medium;
+    }
+    .anim-placeholder{
+        @apply font-[Neue_Montreal] text-[var(--semiDark)];
+    }
+    .my-img{
+        @apply flex flex-col absolute overflow-hidden;
+    }
+    .mask-overlay{
+        @apply absolute top-0 left-0 w-full h-[110%] bg-[var(--baseBackground)];
+    }
+    .fade-in{
+        @apply opacity-0;
     }
 }
 
@@ -121,4 +144,17 @@ body{
 .special-font b {
     font-family: "Zentry";
     font-feature-settings: "ss01" on;
+}
+
+.mask-overlay{
+    transform: scaleY(1);
+    will-change: transform;
+}
+
+.main-btn:active{
+   transform: scale(0.9);
+}
+
+.reveal-line{
+    will-change: transfrom;
 }

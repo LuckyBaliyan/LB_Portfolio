@@ -3,7 +3,7 @@ import React,{useRef} from 'react'
 import { NavLink } from 'react-router-dom'
 import gsap from 'gsap';
 
-const Nav = () => {
+const Nav = ({delay = 0.4}) => {
   const logoRef = useRef(null);
 
   useGSAP(()=>{
@@ -12,8 +12,8 @@ const Nav = () => {
     tl.to(logoRef.current,{
       y:0,
       ease:'ease.in',
-      duration:0.85,
-      delay:0.6,
+      duration:0.65,
+      delay:delay,
     })
 
     .to('.links',{
@@ -28,12 +28,12 @@ const Nav = () => {
   },[])
 
   return (
-    <nav>
+    <nav className='mix-blend-difference text-white'>
        <div className="logo special-font tracking-wide mask flex gap-2">
           <h6 ref={logoRef} className='translate-y-[100%]'>
             <b>L</b><b>B</b><sup className='text-3xl'>&copy;</sup>
           </h6>
-          <p className='inline-block text-[18px] text-[var(--semiDark)] opacity-0 font-normal self-center anim-placeholder'>
+          <p className='inline-block opacity-0 text-sm !text-white font-light self-center anim-placeholder'>
             (web Developer / Designer)
           </p>
        </div>
