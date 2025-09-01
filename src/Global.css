@@ -37,6 +37,11 @@
     url('/fonts/neuemontreal-regular-webfont.woff') format('woff');
 }
 
+@font-face {
+    font-family: "zentry";
+    src: url("/fonts/zentry-regular.woff2") format("woff2");
+}
+
 :root{
   --baseBackground:#E8E8E3;
   --HeadingsText:#080807;
@@ -49,19 +54,33 @@ body{
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar{
+  width: 0;
+}
+
 
 @layer base{
     section{
         @apply w-full min-h-screen;
     }
+    nav{
+        @apply w-full overflow-hidden py-2 px-6 flex justify-between;
+    }
     h1{
         @apply text-[clamp(3rem,12vw,12rem)] text-[var(--HeadingsText)]  font-[satoshi-black] font-[900] leading-[0.9] tracking-tighter translate-y-[0%];
     }
     h2{
-        @apply text-9xl text-[var(--HeadingsText)]  font-[satoshi-black] font-[900] leading-[0.9] md:tracking-[-7px] lg:tracking-[-9px] translate-y-[0%];
+        @apply md:text-7xl lg:text-9xl text-[var(--HeadingsText)]  font-[satoshi-black] font-[900] leading-[0.9] md:tracking-[-7px] lg:tracking-[-9px] translate-y-[0%];
     }
     img{
-        @apply overflow-hidden object-cover;
+        @apply overflow-y-hidden object-cover;
+    }
+    ul{
+        @apply flex justify-evenly;
+    }
+
+    li{
+        @apply p-2 font-[Neue_Montreal] ;
     }
 }
 
@@ -71,6 +90,35 @@ body{
         @apply text-sm inline-block font-[Neue_Montreal];
     }
     .mask{
-        @apply overflow-hidden;
+        @apply overflow-y-hidden;
     }
+    .logo{
+        @apply font-[Neue_Montreal] font-[600] text-5xl will-change-transform;
+    }
+    .links{
+        @apply will-change-transform;
+    }
+    .link{
+        @apply relative;
+    }
+}
+
+.anim {
+  animation: rotate 32s linear infinite;
+  animation-delay: 1.2s;
+  will-change: transform;
+}
+
+@keyframes rotate {
+    from{
+        rotate: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.special-font b {
+    font-family: "Zentry";
+    font-feature-settings: "ss01" on;
 }

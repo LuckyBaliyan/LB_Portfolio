@@ -6,9 +6,7 @@ import Footer from '../components/footer/Footer'
 const Works = () => {
   return (
     <>
-      <nav>
-          <Nav/>
-      </nav>
+      <Nav/>
       <section>
         <h1>Works</h1>
       </section>

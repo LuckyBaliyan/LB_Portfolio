@@ -52,7 +52,7 @@ const Transition = (Page) => {
         scaleY: 0,
         duration: 1,
         ease: 'power4.inOut',
-        delay: 0.1,
+        //delay: 0.1,
         onStart:()=>{
             setShowContent(true);
         }
