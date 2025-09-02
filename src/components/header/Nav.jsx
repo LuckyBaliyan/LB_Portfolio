@@ -47,7 +47,7 @@ const Nav = ({delay = 0.4}) => {
           <h6 ref={logoRef} className='translate-y-[100%]'>
             <b>L</b><b>B</b><sup className='text-3xl'>&copy;</sup>
           </h6>
-          <p className='md:inline-block opacity-0 text-sm !text-white translate-x-[-20%] md:translate-x-0 scale-60 md:scale-100 font-light self-center anim-placeholder'>
+          <p className='md:inline-block opacity-0 text-sm !text-white translate-x-[-20%] md:translate-x-0 scale-70 md:scale-100 font-light self-center anim-placeholder'>
             (web Developer / Designer)
           </p>
        </div>

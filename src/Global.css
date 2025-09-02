@@ -117,7 +117,7 @@ body{
         @apply relative;
     }
     .greet{
-        @apply font-[Neue_Montreal] sm:text-3xl md:text-5xl lg:text-7xl font-medium;
+        @apply font-[Neue_Montreal] text-4xl md:text-5xl lg:text-7xl font-medium;
     }
     .anim-placeholder{
         @apply font-[Neue_Montreal] text-[var(--semiDark)];
