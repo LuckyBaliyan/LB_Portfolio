@@ -90,7 +90,7 @@ body{
         @apply p-2 font-[Neue_Montreal];
     }
     button.main-btn{
-        @apply px-8 py-3 bg-[var(--accent)] text-[var(--baseBackground)] 
+        @apply px-4 py-2 lg:px-8 lg:py-3 bg-[var(--accent)] text-[var(--baseBackground)] 
         cursor-pointer inset-0 border-0 rounded-full font-[satoshi-black];
     }
 }
@@ -131,6 +131,7 @@ body{
     .fade-in{
         @apply opacity-0;
     }
+
 }
 
 .anim {

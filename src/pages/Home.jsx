@@ -89,20 +89,20 @@ const Home = () => {
           </div>
         </div>
         <div  className="my-img">
-           <CardTilt  className='lg:w-[25vw] lg:h-[32vw] md:w-[46vw] md:h-[50vw]'>
+           <CardTilt  className='lg:w-[25vw] lg:h-[32vw] md:w-[36vw] md:h-[40vw]'>
             <div ref={imgRef} className="img-wrapper relative overflow-hidden rounded-[6px]  w-full h-full">
             <img src="images/my.webp" alt=""className='last scale-115'/>
             <div className="mask-overlay"></div>
             </div>
             </CardTilt>
             <div className="w-full mask py-2">
-              <p ref={nameRef} className='anim-placeholder uppercase tracking-tighter 
-              font-extrabold whitespace-nowrap text-5xl pr-5'>
+              <p ref={nameRef} className='anim-placeholder  uppercase tracking-tighter 
+              font-extrabold whitespace-nowrap md:text-2xl lg:text-5xl pr-5'>
               &#9679; <SplitText text='Lucky Baliyan'/>
               </p>
             </div>
         </div>
-        <div  className="my-para overflow-hidden  absolute top-[55%] right-30 flex flex-col gap-2">
+        <div  className="my-para overflow-hidden  absolute top-[55%] right-10 lg:right-30 flex flex-col gap-2">
           <p ref={lineRef} className='leading-[1.08] overflow-hidden'>
             <SplitLine text='I’m a Frontend Developer and UI Enthusiast who loves 
             crafting modern animated and user-friendly web experiences.  
@@ -112,10 +112,10 @@ const Home = () => {
           <div className='fade-in'><MainBtn text={'See Works'} /></div>
         </div>
         <div className='w-full absolute bottom-0 left-0 flex justify-between pb-8 px-4'>
-          <h5 ref={CopyRef} className='font-["satoshi-black"] text-6xl'>&copy;
+          <h5 ref={CopyRef} className='font-["satoshi-black"] text-4xl lg:text-6xl'>&copy;
             <SplitText text="2025"/>
           </h5>
-          <p ref={SinceRef} className='font-["Neue_Montreal"] text-xl self-end'>
+          <p ref={SinceRef} className='font-["Neue_Montreal"] text-sm lg:text-xl self-end'>
             <SplitText text="/ Creating Since 2023" />
           </p>
         </div>
