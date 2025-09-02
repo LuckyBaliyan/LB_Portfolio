@@ -109,7 +109,7 @@ const Home = () => {
           </p>
           <div className='fade-in ml-2'><MainBtn text={'See Works'} /></div>
         </div>
-        <div className='w-fit md:w-full absolute bottom-[19%] right-0  md:bottom-0 md:left-0 flex 
+        <div className='w-fit md:w-full absolute bottom-[21%] right-0  md:bottom-0 md:left-0 flex 
           flex-col md:flex-row justify-between md:pb-8 px-4'>
           <h5 ref={CopyRef} className='font-["satoshi-black"] text-2xl md:text-4xl lg:text-6xl'>&copy;
             <SplitText text="2025"/>
