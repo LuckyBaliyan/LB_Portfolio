@@ -87,8 +87,9 @@ body{
     }
 
     li{
-        @apply p-2 font-[Neue_Montreal];
+        @apply p-2 font-[Neue_Montreal] sm:text-sm lg:text-base;
     }
+    
     button.main-btn{
         @apply px-4 py-2 lg:px-8 lg:py-3 bg-[var(--accent)] text-[var(--baseBackground)] 
         cursor-pointer inset-0 border-0 rounded-full font-[satoshi-black];

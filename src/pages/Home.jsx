@@ -65,7 +65,7 @@ const Home = () => {
       >
       <h4
         ref={textRef}
-        className="text-white text-2xl md:text-4xl font-medium mix-blend-difference greet"
+        className="text-white text-2xl lg:text-4xl font-medium mix-blend-difference greet"
       >
         <p>&#9679;</p> Welcome
       </h4>
