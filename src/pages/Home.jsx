@@ -102,14 +102,14 @@ const Home = () => {
               </p>
             </div>
         </div>
-        <div className="my-para overflow-hidden absolute top-[30%] right-[0%] md:top-[55%] md:right-30  flex flex-col gap-2">
-          <p ref={lineRef} className='leading-[1.08] w-2/3 md:w-full text-sm lg:text-[18px] overflow-hidden'>
+        <div className="my-para overflow-hidden md:absolute hidden md:top-[55%] md:right-30 md:flex flex-col gap-2">
+          <p ref={lineRef} className='leading-[1.08] w-2/3 md:w-full px-2 text-sm lg:text-[18px] overflow-hidden'>
             <SplitLine text='I’m a Frontend Developer and UI Enthusiast who loves 
             crafting modern animated and user-friendly web experiences.  
             From hackathons to real-world projects, I bring ideas alive with
             clean code and creative design.' />
           </p>
-          <div className='fade-in'><MainBtn text={'See Works'} /></div>
+          <div className='fade-in ml-2'><MainBtn text={'See Works'} /></div>
         </div>
         <div className='w-full absolute bottom-0 left-0 flex justify-between pb-8 px-4'>
           <h5 ref={CopyRef} className='font-["satoshi-black"] text-4xl lg:text-6xl'>&copy;
