@@ -73,7 +73,7 @@ const Home = () => {
       {/** Main Content */}
       <Nav delay={1.8}/>
       <section className='relative'>
-        <div ref={headingRef} className='flex-col md:mt-14 lg:mt-4 ml-4 w-[85%] pointer-events-none hidden md:flex'>
+        <div ref={headingRef} className='flex-col md:mt-14 lg:mt-4 ml-4 w-[85%] pointer-events-none flex'>
           <div className='mask relative z-40 mt-2'>
             <h1 className='w-full p-2 whitespace-nowrap'>
               <SplitText text='Creative web' /> 
@@ -111,7 +111,8 @@ const Home = () => {
           </p>
           <div className='fade-in ml-2'><MainBtn text={'See Works'} /></div>
         </div>
-        <div className='w-fit  md:w-full absolute bottom-4 right-0 pb-25 md:bottom-0 md:left-0 flex flex-col md:flex-row justify-between md:pb-8 px-4'>
+        <div className='w-fit  md:w-full absolute bottom-4 right-0  md:bottom-0 md:left-0 flex 
+          flex-col md:flex-row justify-between md:pb-8 px-4'>
           <h5 ref={CopyRef} className='font-["satoshi-black"] text-4xl lg:text-6xl'>&copy;
             <SplitText text="2025"/>
           </h5>
