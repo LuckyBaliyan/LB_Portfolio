@@ -89,7 +89,7 @@ const Home = () => {
           </div>
         </div>
         <div  className="my-img">
-           <CardTilt  className='lg:w-[25vw] lg:h-[32vw] md:w-[30vw] md:h-[36vw]'>
+           <CardTilt  className='w-[20vh] h-[25vh] lg:w-[25vw] lg:h-[32vw] md:w-[30vw] md:h-[36vw]'>
             <div ref={imgRef} className="img-wrapper relative overflow-hidden rounded-[6px]  w-full h-full">
             <img src="images/my.webp" alt=""className='last scale-115'/>
             <div className="mask-overlay"></div>
@@ -102,8 +102,8 @@ const Home = () => {
               </p>
             </div>
         </div>
-        <div  className="my-para overflow-hidden  absolute top-[55%] right-10 lg:right-30 flex flex-col gap-2">
-          <p ref={lineRef} className='leading-[1.08] sm:text-sm lg:text-[18px] overflow-hidden'>
+        <div className="my-para overflow-hidden absolute top-[30%] right-[0%] md:top-[55%] md:right-30  flex flex-col gap-2">
+          <p ref={lineRef} className='leading-[1.08] w-2/3 md:w-full text-sm lg:text-[18px] overflow-hidden'>
             <SplitLine text='I’m a Frontend Developer and UI Enthusiast who loves 
             crafting modern animated and user-friendly web experiences.  
             From hackathons to real-world projects, I bring ideas alive with
