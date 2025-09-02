@@ -63,7 +63,7 @@ const Nav = ({delay = 0.4}) => {
                 }
                 end={l === 'Home'}
                 >
-                <li className='mask link'>{l.split('').map((w,ind)=>(
+                <li className='mask link text-right md:text-center'>{l.split('').map((w,ind)=>(
                   <span className='uppercase inline-block translate-y-[110%] links' key={ind}>{w}</span>
                 ))}</li>
               </NavLink>

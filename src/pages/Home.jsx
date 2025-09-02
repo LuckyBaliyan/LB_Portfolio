@@ -73,9 +73,9 @@ const Home = () => {
       {/** Main Content */}
       <Nav delay={1.8}/>
       <section className='relative'>
-        <div ref={headingRef} className='flex-col mt-24 md:mt-14 lg:mt-4 ml-4 w-[85%] pointer-events-none flex'>
+        <div ref={headingRef} className='flex-col mt-24 md:mt-14 lg:mt-4 ml-2 md:ml-4 w-[85%] pointer-events-none flex'>
           <div className='mask relative z-40 mt-2'>
-            <h1 className='w-full p-2 whitespace-nowrap'>
+            <h1 className='w-full p-2 whitespace-normal md:whitespace-nowrap'>
               <SplitText text='Creative web' /> 
               <img src="images/Emoji.webp" alt="" 
             className='hidden md:inline-block w-[clamp(40px,8vw,120px)] opacity-0 aspect-square 
@@ -83,7 +83,7 @@ const Home = () => {
             </h1>
           </div>
           <div  className='mask md:ml-4 lg:ml-12 z-30'>
-            <h2 className='w-full text-right pb-2 pr-3'>
+            <h2 className='w-full text-start md:text-right pb-2 pr-3'>
               <SplitText text='Developer' />
             </h2>
           </div>
