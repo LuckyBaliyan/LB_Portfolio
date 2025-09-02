@@ -73,7 +73,7 @@ const Home = () => {
       {/** Main Content */}
       <Nav delay={1.8}/>
       <section className='relative'>
-        <div ref={headingRef} className='flex-col mt-24 md:mt-14 lg:mt-4 ml-4 w-[85%] pointer-events-none flex'>
+        <div ref={headingRef} className='flex-col translate-y-[100%] md:translate-y-0 mt-24 md:mt-14 lg:mt-4 ml-4 w-[85%] pointer-events-none flex'>
           <div className='mask relative -ml-2 md:ml-0 z-40 mt-2'>
             <h1 className='w-full p-0 md:p-2 whitespace-normal md:whitespace-nowrap'>
               <SplitText text='Creative web' /> 
@@ -103,15 +103,13 @@ const Home = () => {
             </div>
         </div>
         <div className="my-para overflow-hidden absolute top-[30%] left-0 md:absolute md:top-[55%] md:left-[60%] flex flex-col gap-2">
-          <p ref={lineRef} className='leading-[1] md:leading-[1.08] w-2/3 md:w-full px-2 text-sm lg:text-[18px] overflow-hidden'>
+          <p ref={lineRef} className='leading-[1] md:leading-[1.08] w-2/3 md:w-[70%] px-2 text-sm lg:text-[16px] overflow-hidden'>
             <SplitLine text='I’m a Frontend Developer and UI Enthusiast who loves 
-            crafting modern animated and user-friendly web experiences.  
-            From hackathons to real-world projects, I bring ideas alive with
-            clean code and creative design.' />
+            crafting modern animated and user-friendly web experiences.' />
           </p>
           <div className='fade-in ml-2'><MainBtn text={'See Works'} /></div>
         </div>
-        <div className='w-fit md:w-full absolute top-[74%] right-0  md:bottom-0 md:left-0 flex 
+        <div className='w-fit md:w-full absolute bottom-[19%] right-0  md:bottom-0 md:left-0 flex 
           flex-col md:flex-row justify-between md:pb-8 px-4'>
           <h5 ref={CopyRef} className='font-["satoshi-black"] text-2xl md:text-4xl lg:text-6xl'>&copy;
             <SplitText text="2025"/>

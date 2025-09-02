@@ -68,7 +68,7 @@ body{
         @apply w-full overflow-hidden py-2 px-6 flex justify-between fixed top-0 left-0 z-[100];
     }
     h1{
-        @apply text-[clamp(5.8rem,10vw,12rem)] text-[var(--HeadingsText)] leading-[0.8] font-[satoshi] font-[600]  md:font-[satoshi-black] md:font-[900] md:leading-[0.9] tracking-tighter translate-y-[0%];
+        @apply text-[clamp(3rem,10vw,12rem)] text-[var(--HeadingsText)] leading-[0.8] font-[satoshi] font-[600]  md:font-[satoshi-black] md:font-[900] md:leading-[0.9] tracking-tighter translate-y-[0%];
     }
     h2{
         @apply text-5xl md:text-8xl lg:text-9xl text-[var(--HeadingsText)]  font-[satoshi-black] font-[900] leading-[0.9] md:tracking-[-7px] lg:tracking-[-9px] translate-y-[0%];
