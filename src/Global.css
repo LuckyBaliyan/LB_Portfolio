@@ -128,7 +128,7 @@ body{
         md:translate-x-[-80%] lg:translate-y-[-48%]  md:translate-y-[-50%] z-10;
     }
     .mask-overlay{
-        @apply absolute top-0 left-0 w-full h-[110%] bg-[var(--baseBackground)];
+        @apply absolute top-0 left-0 w-full  h-full bg-[var(--baseBackground)];
     }
     .fade-in{
         @apply opacity-0;

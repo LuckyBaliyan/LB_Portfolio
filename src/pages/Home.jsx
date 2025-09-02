@@ -73,7 +73,7 @@ const Home = () => {
       {/** Main Content */}
       <Nav delay={1.8}/>
       <section className='relative'>
-        <div ref={headingRef} className='flex-col translate-y-[100%] md:translate-y-0 mt-24 md:mt-14 lg:mt-4 ml-4 w-[85%] pointer-events-none flex'>
+        <div ref={headingRef} className='flex-col translate-y-[100%] !z-40 md:translate-y-0 mt-24 md:mt-4 lg:mt-4 ml-4 w-[85%] pointer-events-none flex'>
           <div className='mask relative -ml-2 md:ml-0 z-40 mt-2'>
             <h1 className='w-full p-0 md:p-2 whitespace-normal md:whitespace-nowrap'>
               <SplitText text='Creative web' /> 
@@ -82,13 +82,13 @@ const Home = () => {
             z-[1] md:-translate-x-6 lg:-translate-x-10 anim'/>
             </h1>
           </div>
-          <div  className='mask md:ml-4 lg:ml-12 z-30'>
-            <h2 className='w-full text-start md:text-right pb-2 pr-3'>
+          <div  className='mask md:ml-4 lg:ml-12 z-50'>
+            <h2 className='w-full text-start z-[80] md:text-right pb-2 pr-3'>
               <SplitText text='Developer' />
             </h2>
           </div>
         </div>
-        <div  className="my-img">
+        <div  className="my-img scale-100 md:scale-75 z-20">
            <CardTilt  className='w-[20vh] h-[23vh] lg:w-[25vw] lg:h-[32vw] md:w-[30vw] md:h-[36vw]'>
             <div ref={imgRef} className="img-wrapper relative overflow-hidden rounded-[6px]  w-full h-full">
             <img src="images/my.webp" alt=""className='last scale-115'/>
@@ -103,7 +103,7 @@ const Home = () => {
             </div>
         </div>
         <div className="my-para overflow-hidden absolute top-[30%] left-0 md:absolute md:top-[55%] md:left-[60%] flex flex-col gap-2">
-          <p ref={lineRef} className='leading-[1] md:leading-[1.08] w-2/3 md:w-[70%] px-2 text-sm lg:text-[16px] overflow-hidden'>
+          <p ref={lineRef} className='leading-[1] md:leading-[1.08] w-2/3 md:w-[90%] px-2 text-sm lg:text-[16px] overflow-hidden'>
             <SplitLine text='I’m a Frontend Developer and UI Enthusiast who loves 
             crafting modern animated and user-friendly web experiences.' />
           </p>
