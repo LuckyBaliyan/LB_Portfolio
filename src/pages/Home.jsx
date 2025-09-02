@@ -10,6 +10,7 @@ import { CardTilt } from '../components/features/CradTilt.jsx';
 import SplitLine from '../animations/splitText/SplitLine.jsx';
 import MainBtn from '../components/buttons/MainBtn.jsx';
 import Menu from '../components/header/Menu.jsx';
+import SlideUp from '../animations/pageTransition/SlideUp.jsx';
 
 const Home = () => {
   const loaderRef = useRef(null);
@@ -88,7 +89,7 @@ const Home = () => {
             </h2>
           </div>
         </div>
-        <div  className="my-img scale-100 md:scale-75 z-20">
+        <div  className="my-img scale-100 md:scale-75">
            <CardTilt  className='w-[20vh] h-[23vh] lg:w-[25vw] lg:h-[32vw] md:w-[30vw] md:h-[36vw]'>
             <div ref={imgRef} className="img-wrapper relative overflow-hidden rounded-[6px]  w-full h-full">
             <img src="images/my.webp" alt=""className='last scale-115'/>
@@ -119,9 +120,11 @@ const Home = () => {
           </p>
         </div>
       </section>
-      <footer aria-label='Footer'>
-      <Footer/>
-      </footer>
+      <SlideUp className='h-screen w-full  overflow-hidden'>
+        <div className='w-full h-full'>
+          <Footer />
+        </div>
+      </SlideUp>
     </>
   )
 }

@@ -10,7 +10,7 @@ const Nav = ({delay = 0.4}) => {
 
   useEffect(()=>{
     const handleScroll = () => {
-      if (window.scrollY > window.innerHeight * 0.98) {
+      if (window.scrollY > window.innerHeight * 0.70) {
         setHideLinks(true);
       } else {
         setHideLinks(false);

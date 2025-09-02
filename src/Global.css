@@ -92,7 +92,7 @@ body{
 
     button.main-btn{
         @apply px-4 py-2 lg:px-8 lg:py-3 bg-[var(--accent)] text-[var(--baseBackground)] 
-        cursor-pointer inset-0 border-0 rounded-full font-[satoshi-black];
+        cursor-pointer inset-0 border-0 rounded-full font-[satoshi-black] transition-all ease-in-out duration-200
     }
 }
 
@@ -161,8 +161,8 @@ body{
     will-change: transform;
 }
 
-.main-btn:active{
-   transform: scale(0.9);
+.main-btn:active,.main-btn:hover{
+   transform: scale(0.95);
 }
 
 .reveal-line{
