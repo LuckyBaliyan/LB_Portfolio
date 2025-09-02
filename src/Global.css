@@ -71,7 +71,7 @@ body{
         @apply text-[clamp(3rem,10vw,12rem)] text-[var(--HeadingsText)]  font-[satoshi-black] font-[900] leading-[0.9] tracking-tighter translate-y-[0%];
     }
     h2{
-        @apply md:text-7xl lg:text-9xl text-[var(--HeadingsText)]  font-[satoshi-black] font-[900] leading-[0.9] md:tracking-[-7px] lg:tracking-[-9px] translate-y-[0%];
+        @apply md:text-8xl lg:text-9xl text-[var(--HeadingsText)]  font-[satoshi-black] font-[900] leading-[0.9] md:tracking-[-7px] lg:tracking-[-9px] translate-y-[0%];
     }
     h5{
         @apply text-6xl;
@@ -122,7 +122,7 @@ body{
         @apply font-[Neue_Montreal] text-[var(--semiDark)];
     }
     .my-img{
-        @apply flex flex-col absolute overflow-hidden md:w-[46vw] md:h-[50vw] 
+        @apply flex flex-col absolute overflow-hidden md:w-[30vw] md:h-[36vw] 
         lg:w-[25vw] lg:h-[32vw] top-1/2 left-1/2 translate-x-[-80%] lg:translate-y-[-48%] md:translate-y-[-50%] z-10;
     }
     .mask-overlay{

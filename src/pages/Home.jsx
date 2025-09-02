@@ -82,14 +82,14 @@ const Home = () => {
             z-[1] md:-translate-x-6 lg:-translate-x-10 anim'/>
             </h1>
           </div>
-          <div  className='mask md:ml-8 lg:ml-12 z-30'>
+          <div  className='mask md:ml-4 lg:ml-12 z-30'>
             <h2 className='w-full text-right pb-2 pr-3'>
               <SplitText text='Developer' />
             </h2>
           </div>
         </div>
         <div  className="my-img">
-           <CardTilt  className='lg:w-[25vw] lg:h-[32vw] md:w-[36vw] md:h-[40vw]'>
+           <CardTilt  className='lg:w-[25vw] lg:h-[32vw] md:w-[30vw] md:h-[36vw]'>
             <div ref={imgRef} className="img-wrapper relative overflow-hidden rounded-[6px]  w-full h-full">
             <img src="images/my.webp" alt=""className='last scale-115'/>
             <div className="mask-overlay"></div>
@@ -103,7 +103,7 @@ const Home = () => {
             </div>
         </div>
         <div  className="my-para overflow-hidden  absolute top-[55%] right-10 lg:right-30 flex flex-col gap-2">
-          <p ref={lineRef} className='leading-[1.08] overflow-hidden'>
+          <p ref={lineRef} className='leading-[1.08] sm:text-sm lg:text-[18px] overflow-hidden'>
             <SplitLine text='I’m a Frontend Developer and UI Enthusiast who loves 
             crafting modern animated and user-friendly web experiences.  
             From hackathons to real-world projects, I bring ideas alive with
