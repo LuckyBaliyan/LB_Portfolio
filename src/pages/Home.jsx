@@ -102,7 +102,7 @@ const Home = () => {
               </p>
             </div>
         </div>
-        <div className="my-para overflow-hidden md:absolute hidden md:top-[55%] md:right-30 md:flex flex-col gap-2">
+        <div className="my-para overflow-hidden absolute top-[30%] left-0 md:absolute md:top-[55%] md:left-[60%] flex flex-col gap-2">
           <p ref={lineRef} className='leading-[1.08] w-2/3 md:w-full px-2 text-sm lg:text-[18px] overflow-hidden'>
             <SplitLine text='I’m a Frontend Developer and UI Enthusiast who loves 
             crafting modern animated and user-friendly web experiences.  
