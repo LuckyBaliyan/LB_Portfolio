@@ -82,14 +82,14 @@ const Home = () => {
             z-[1] md:-translate-x-6 lg:-translate-x-10 anim'/>
             </h1>
           </div>
-          <div  className='mask ml-12 z-30'>
+          <div  className='mask md:ml-8 lg:ml-12 z-30'>
             <h2 className='w-full text-right pb-2 pr-3'>
               <SplitText text='Developer' />
             </h2>
           </div>
         </div>
-        <div  className="my-img md:w-[48vw] md:h-[52vw] lg:w-[25vw] lg:h-[32vw] top-1/2 left-1/2 translate-x-[-80%] translate-y-[-48%] z-10">
-           <CardTilt  className='w-[25vw] h-[32vw]'>
+        <div  className="my-img">
+           <CardTilt  className='lg:w-[25vw] lg:h-[32vw] md:w-[46vw] md:h-[50vw]'>
             <div ref={imgRef} className="img-wrapper relative overflow-hidden rounded-[6px]  w-full h-full">
             <img src="images/my.webp" alt=""className='last scale-115'/>
             <div className="mask-overlay"></div>
