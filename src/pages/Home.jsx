@@ -75,7 +75,7 @@ const Home = () => {
       <section className='relative'>
         <div ref={headingRef} className='flex-col mt-24 md:mt-14 lg:mt-4 ml-4 w-[85%] pointer-events-none flex'>
           <div className='mask relative z-40 mt-2'>
-            <h1 className='w-full p-2 whitespace-normal md:whitespace-nowrap'>
+            <h1 className='w-full p-0 md:p-2 whitespace-normal md:whitespace-nowrap'>
               <SplitText text='Creative web' /> 
               <img src="images/Emoji.webp" alt="" 
             className='hidden md:inline-block w-[clamp(40px,8vw,120px)] opacity-0 aspect-square 
