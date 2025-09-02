@@ -83,11 +83,11 @@ body{
         @apply overflow-y-hidden object-cover w-full h-full;
     }
     ul{
-        @apply flex justify-evenly;
+        @apply flex md:flex-row md:justify-evenly flex-col;
     }
 
     li{
-        @apply p-2 font-[Neue_Montreal] sm:text-sm lg:text-base;
+        @apply md:p-2 font-[Neue_Montreal] sm:text-sm lg:text-base sm:leading-[1] md:leading-[2];
     }
 
     button.main-btn{
@@ -111,13 +111,13 @@ body{
         @apply will-change-transform;
     }
     .link{
-        @apply relative;
+        @apply relative  whitespace-nowrap;
     }
     .navigations{
         @apply relative;
     }
     .greet{
-        @apply font-[Neue_Montreal] sm:text-2xl md:text-4xl lg:text-7xl font-medium;
+        @apply font-[Neue_Montreal] sm:text-3xl md:text-5xl lg:text-7xl font-medium;
     }
     .anim-placeholder{
         @apply font-[Neue_Montreal] text-[var(--semiDark)];

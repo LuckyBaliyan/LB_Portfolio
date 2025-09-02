@@ -73,7 +73,7 @@ const Home = () => {
       {/** Main Content */}
       <Nav delay={1.8}/>
       <section className='relative'>
-        <div ref={headingRef} className='flex flex-col md:mt-14 lg:mt-4 ml-4 w-[85%] pointer-events-none sm:hidden md:flex'>
+        <div ref={headingRef} className='flex-col md:mt-14 lg:mt-4 ml-4 w-[85%] pointer-events-none hidden md:flex'>
           <div className='mask relative z-40 mt-2'>
             <h1 className='w-full p-2 whitespace-nowrap'>
               <SplitText text='Creative web' /> 
