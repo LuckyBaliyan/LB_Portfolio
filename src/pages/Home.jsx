@@ -97,7 +97,7 @@ const Home = () => {
             </CardTilt>
             <div className="w-full mask py-2">
               <p ref={nameRef} className='anim-placeholder  uppercase tracking-tighter 
-              font-extrabold whitespace-nowrap md:text-2xl lg:text-5xl pr-5'>
+              font-extrabold whitespace-nowrap text-2xl md:text-2xl lg:text-5xl pr-5'>
               &#9679; <SplitText text='Lucky Baliyan'/>
               </p>
             </div>
@@ -111,7 +111,7 @@ const Home = () => {
           </p>
           <div className='fade-in ml-2'><MainBtn text={'See Works'} /></div>
         </div>
-        <div className='w-fit  md:w-full absolute bottom-4 right-0  md:bottom-0 md:left-0 flex 
+        <div className='w-fit md:w-full absolute top-[75%] right-0  md:bottom-0 md:left-0 flex 
           flex-col md:flex-row justify-between md:pb-8 px-4'>
           <h5 ref={CopyRef} className='font-["satoshi-black"] text-4xl lg:text-6xl'>&copy;
             <SplitText text="2025"/>

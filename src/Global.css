@@ -124,7 +124,8 @@ body{
     }
     .my-img{
         @apply flex flex-col absolute overflow-hidden md:w-[30vw] md:h-[36vw] 
-        lg:w-[25vw] lg:h-[32vw] top-1/2 left-0  translate-x-2  translate-y-10 md:left-1/2  md:translate-x-[-80%] lg:translate-y-[-48%]  md:translate-y-[-50%] z-10;
+        lg:w-[25vw] lg:h-[32vw] top-1/2 left-0  translate-x-2  translate-y-8 md:left-1/2  
+        md:translate-x-[-80%] lg:translate-y-[-48%]  md:translate-y-[-50%] z-10;
     }
     .mask-overlay{
         @apply absolute top-0 left-0 w-full h-[110%] bg-[var(--baseBackground)];
