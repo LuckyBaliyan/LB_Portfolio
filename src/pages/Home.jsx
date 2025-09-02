@@ -74,7 +74,7 @@ const Home = () => {
       <Nav delay={1.8}/>
       <section className='relative'>
         <div ref={headingRef} className='flex-col mt-24 md:mt-14 lg:mt-4 ml-4 w-[85%] pointer-events-none flex'>
-          <div className='mask relative z-40 mt-2'>
+          <div className='mask relative -ml-2 md:ml-0 z-40 mt-2'>
             <h1 className='w-full p-0 md:p-2 whitespace-normal md:whitespace-nowrap'>
               <SplitText text='Creative web' /> 
               <img src="images/Emoji.webp" alt="" 
@@ -97,13 +97,13 @@ const Home = () => {
             </CardTilt>
             <div className="w-full mask py-2">
               <p ref={nameRef} className='anim-placeholder  uppercase tracking-tighter 
-              font-extrabold whitespace-nowrap text-2xl md:text-2xl lg:text-5xl pr-5'>
+              font-extrabold whitespace-nowrap text-xl md:text-2xl lg:text-5xl pr-5'>
               &#9679; <SplitText text='Lucky Baliyan'/>
               </p>
             </div>
         </div>
         <div className="my-para overflow-hidden absolute top-[30%] left-0 md:absolute md:top-[55%] md:left-[60%] flex flex-col gap-2">
-          <p ref={lineRef} className='leading-[1.08] w-2/3 md:w-full px-2 text-sm lg:text-[18px] overflow-hidden'>
+          <p ref={lineRef} className='leading-[1] md:leading-[1.08] w-2/3 md:w-full px-2 text-sm lg:text-[18px] overflow-hidden'>
             <SplitLine text='I’m a Frontend Developer and UI Enthusiast who loves 
             crafting modern animated and user-friendly web experiences.  
             From hackathons to real-world projects, I bring ideas alive with
@@ -113,7 +113,7 @@ const Home = () => {
         </div>
         <div className='w-fit md:w-full absolute top-[74%] right-0  md:bottom-0 md:left-0 flex 
           flex-col md:flex-row justify-between md:pb-8 px-4'>
-          <h5 ref={CopyRef} className='font-["satoshi-black"] text-4xl lg:text-6xl'>&copy;
+          <h5 ref={CopyRef} className='font-["satoshi-black"] text-2xl md:text-4xl lg:text-6xl'>&copy;
             <SplitText text="2025"/>
           </h5>
           <p ref={SinceRef} className='font-["Neue_Montreal"] text-sm lg:text-xl self-end'>
