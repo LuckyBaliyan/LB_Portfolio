@@ -9,6 +9,7 @@ import greetings from '../context/data.js';
 import { CardTilt } from '../components/features/CradTilt.jsx';
 import SplitLine from '../animations/splitText/SplitLine.jsx';
 import MainBtn from '../components/buttons/MainBtn.jsx';
+import Menu from '../components/header/Menu.jsx';
 
 const Home = () => {
   const loaderRef = useRef(null);
@@ -19,6 +20,7 @@ const Home = () => {
   const lineRef = useRef(null);
   const CopyRef = useRef(null);
   const SinceRef = useRef(null);
+
   
   useGSAP(() => {
     if (!loaderRef.current || !textRef.current) return;
@@ -69,10 +71,10 @@ const Home = () => {
       </h4>
       </div>
       {/** Main Content */}
-      <Nav delay={1.8} />
+      <Nav delay={1.8}/>
       <section className='relative'>
-        <div ref={headingRef} className='flex flex-col mt-4 ml-4 w-[85%] pointer-events-none sm:hidden md:flex'>
-          <div className='mask relative z-40'>
+        <div ref={headingRef} className='flex flex-col md:mt-14 lg:mt-4 ml-4 w-[85%] pointer-events-none sm:hidden md:flex'>
+          <div className='mask relative z-40 mt-2'>
             <h1 className='w-full p-2 whitespace-nowrap'>
               <SplitText text='Creative web' /> 
               <img src="images/Emoji.webp" alt="" 
@@ -86,7 +88,7 @@ const Home = () => {
             </h2>
           </div>
         </div>
-        <div  className="my-img w-[25vw] h-[32vw] top-1/2 left-1/2 translate-x-[-80%] translate-y-[-48%] z-10">
+        <div  className="my-img md:w-[48vw] md:h-[52vw] lg:w-[25vw] lg:h-[32vw] top-1/2 left-1/2 translate-x-[-80%] translate-y-[-48%] z-10">
            <CardTilt  className='w-[25vw] h-[32vw]'>
             <div ref={imgRef} className="img-wrapper relative overflow-hidden rounded-[6px]  w-full h-full">
             <img src="images/my.webp" alt=""className='last scale-115'/>

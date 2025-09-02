@@ -1,10 +1,24 @@
 import { useGSAP } from '@gsap/react'
-import React,{useRef} from 'react'
+import React,{useRef,useState,useEffect} from 'react'
 import { NavLink } from 'react-router-dom'
 import gsap from 'gsap';
+import Menu from './Menu';
 
 const Nav = ({delay = 0.4}) => {
   const logoRef = useRef(null);
+   const [hideLinks,setHideLinks] = useState(false);
+
+  useEffect(()=>{
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight * 0.98) {
+        setHideLinks(true);
+      } else {
+        setHideLinks(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  },[])
 
   useGSAP(()=>{
     const tl = gsap.timeline({});
@@ -37,7 +51,7 @@ const Nav = ({delay = 0.4}) => {
             (web Developer / Designer)
           </p>
        </div>
-       <div className="navigations">
+       <div className={`navigations transition-all ease-linear duration-300 ${hideLinks?'opacity-0 pointer-events-none':'opacity-100 pointer-events-auto'}`}>
          <ul>
           {
             ['Home','Works','about','contact'].map((l,i)=>(
