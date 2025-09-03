@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import {useGSAP} from '@gsap/react';
 import gsap from 'gsap';
 import { CustomEase } from 'gsap/all';
+import { Link, NavLink } from 'react-router-dom';
 
 const Menu = () => {
     gsap.registerPlugin(CustomEase);
@@ -34,7 +35,7 @@ const Menu = () => {
     const data = [
         {
             name:'Home',
-            link:'home'
+            link:''
         },
         {
             name:'Works',
@@ -124,15 +125,20 @@ const Menu = () => {
         <div id="menu-links">
             {
                 data.map((link,i)=>(
-                    <h5 key={i} className='mask'>
+                    <h5 key={i} className='mask lg:leading-[1.4]'>
+                       <NavLink to={`/${link.link}`}  className={({ isActive }) =>
+                        `p-0 rounded-full transition-all duration-200 whitespace-nowrap ${
+                          isActive ? "bg-[#292929] text-white px-6 " : "text-[#d6d2d2] px-6"
+                        }`}>
                         {link.name.split('').map((word,ind)=>(
-                            <span key={ind} className='mask-sp'>{word}</span>
+                            <span key={ind} className='mask-sp'>{word.toUpperCase()}</span>
                         ))}
+                       </NavLink>
                     </h5>
                 ))
             }
         </div>
-        <footer className='footer'>
+        <div className='footer'>
             {
                 socials.map((s,indx)=>(
                     <p key={indx}>
@@ -140,7 +146,7 @@ const Menu = () => {
                     </p>
                 ))
             }
-        </footer>
+        </div>
          <svg className='svg'
         viewBox={`0 0 200 ${window.innerHeight}`}
       >

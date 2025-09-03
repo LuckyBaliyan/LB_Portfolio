@@ -46,8 +46,9 @@
   --baseBackground:#E8E8E3;
   --HeadingsText:#080807;
   --Dark:#000;
-  --semiDark:#393632;
+  --semiDark:#292929;
   --accent:#E63946;
+  --menu:rgb(211, 25, 25);
 }
 
 body{
@@ -74,7 +75,7 @@ body{
         @apply text-5xl md:text-8xl lg:text-9xl text-[var(--HeadingsText)]  font-[satoshi-black] font-[900] leading-[0.9] md:tracking-[-7px] lg:tracking-[-9px] translate-y-[0%];
     }
     h5{
-        @apply text-6xl;
+        @apply md:text-4xl lg:text-6xl;
     }
     p{
         @apply font-[Neue_Montreal];
@@ -93,6 +94,10 @@ body{
     button.main-btn{
         @apply px-4 py-2 lg:px-8 lg:py-3 bg-[var(--accent)] text-[var(--baseBackground)] 
         cursor-pointer inset-0 border-0 rounded-full font-[satoshi-black] transition-all ease-in-out duration-200
+    }
+
+    footer{
+        @apply h-screen w-full;
     }
 }
 
@@ -179,13 +184,19 @@ body{
   width: 540px;
   height: 100dvh;
   max-height: 100dvh;
-  background-color: #292929;
+  background-color:#181717;
   padding:1em 6em;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   transform: translateX(200%);
   will-change: transform;
+}
+
+.main-nav h5{
+    font-family: 'satoshi';
+    font-weight: 600;
+    color:var(--HeadingsText);
 }
 
 .hb-btn{
@@ -200,7 +211,7 @@ body{
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background-color: #292929;
+  background-color: var(--semiDark);
   outline: none;
   border:none;
   z-index: 100;
@@ -217,8 +228,8 @@ body{
 
 #main-h p{
   line-height: 2.5;
-  color:#616161;
-  border-bottom: 1px solid #818080;
+  color:#fff;
+  border-bottom: 1px solid #fff;
 }
 
 .footer{
@@ -228,13 +239,26 @@ body{
   gap:1vw;
 }
 
+.footer p{
+    transition: all 0.1s ease;
+    padding:0.3em 1em;
+    border-radius: 24px;
+    cursor: pointer;
+    color:#fff;
+}
+
+.footer p:hover{
+    background-color: #292929;
+}
+
 .svg{
   position: absolute;
   top: 0;
   left: -169px;
   width: 300px;
   height: 100%;
-  fill: rgb(41, 41, 41);
+  /*fill: #21211e;*/
+  fill:#181717;
   stroke: none;
 }
 
@@ -244,8 +268,9 @@ body{
   will-change: transform;
 }
 
-.hb-btn:hover{
-  background-color: #455CE9;
+.hb-btn:hover
+{
+  background-color:var(--menu);
 }
 
 .bars{
@@ -264,10 +289,11 @@ body{
   transform: rotate(-45deg) translateY(-6px);
 }
 
+
 @media (max-width:640px){
   h5{
     width:100%;
-    font-size: 2.3rem;
+    font-size: 3rem;
     line-height: 1.4;
   }
 
@@ -281,7 +307,7 @@ body{
     width:500px;
   }
 
-  p{
+  .main-nav p{
     font-size:x-small;
   }
 
