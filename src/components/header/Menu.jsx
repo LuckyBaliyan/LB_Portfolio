@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import {useGSAP} from '@gsap/react';
 import gsap from 'gsap';
 import { CustomEase } from 'gsap/all';
@@ -10,6 +10,7 @@ const Menu = () => {
     const isAnimating = useRef();
     const pathRef = useRef();
     const menuRef = useRef();
+    const btnRef = useRef();
 
     const toggleMenu = ()=>{
         if(isAnimating.current) return;
@@ -53,6 +54,25 @@ const Menu = () => {
         'Github','Instagramm','Linkdin','Youtube'
     ]
 
+    useEffect(()=>{
+        const handleScroll = () => {
+          if (window.scrollY > window.innerHeight * 0.90) {
+            gsap.to(btnRef.current,{
+                opacity:1,
+                pointerEvents:'auto',
+                ease:'none',
+            })
+          } else {
+            gsap.set(btnRef.current,{
+                opacity:0,
+                pointerEvents:'none',
+            })
+          }
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    },[])
+
     useGSAP(()=>{
       if(isOpen){
         gsap.to(pathRef.current,{
@@ -92,7 +112,7 @@ const Menu = () => {
     },[isOpen,setIsOpen])
 
   return (
-    <div>
+    <div ref={btnRef} className='opacity-0 pointer-events-none'>
         <button onClick={toggleMenu} className='hb-btn'>
             <div className={`bars ${isOpen?'cross':''}`}></div>
             <div className={`bars ${isOpen?'cross':''}`}></div>
@@ -121,7 +141,7 @@ const Menu = () => {
                 ))
             }
         </footer>
-         <svg
+         <svg className='svg'
         viewBox={`0 0 200 ${window.innerHeight}`}
       >
         <path ref={pathRef} d={initialPath} />

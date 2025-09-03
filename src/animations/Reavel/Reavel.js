@@ -27,11 +27,11 @@ const Reavel = (ref,options={}) => {
     });
     }
 
-    const img = ref.current.querySelector('.mask-overlay');
+    const img = ref.current;
     if(img){
       gsap.to(img,{
-      scaleY:0,
-      duration: options.imgDuration || 1.2,
+      scale:1,
+      duration: options.imgDuration || 1,
       transformOrigin:options.origin || 'bottom',
       ease: options.imgEase || 'power2.out',
       delay: options.imgDelay || options.delay || 0,

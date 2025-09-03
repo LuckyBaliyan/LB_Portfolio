@@ -59,7 +59,7 @@ const Home = () => {
   
   return (
     <>
-      {/**cLoader */}
+      {/**Loader */}
       <div
         ref={loaderRef}
         className="fixed top-0 left-0 bg-[#121212] z-[999] w-full h-screen flex items-center justify-center pointer-events-none"
@@ -71,8 +71,11 @@ const Home = () => {
         <span>&#9679;</span> Welcome
       </h4>
       </div>
-      {/** Main Content */}
+      {/** Landing Page */}
       <Nav delay={1.8}/>
+      <div className="fixed top-2 right-4 opacity-100 pointer-events-auto z-[800]">
+       <Menu />
+      </div>
       <section className='relative'>
         <div ref={headingRef} className='flex-col translate-y-[100%] !z-40 md:translate-y-0 mt-24 md:mt-4 lg:mt-4 ml-4 w-[85%] pointer-events-none flex'>
           <div className='mask relative -ml-2 md:ml-0 z-40 mt-2'>
@@ -89,11 +92,11 @@ const Home = () => {
             </h2>
           </div>
         </div>
-        <div  className="my-img scale-100 md:scale-75">
+        <div className="my-img scale-100 md:scale-75">
            <CardTilt  className='w-[20vh] h-[23vh] lg:w-[25vw] lg:h-[32vw] md:w-[30vw] md:h-[36vw]'>
-            <div ref={imgRef} className="img-wrapper relative overflow-hidden rounded-[6px]  w-full h-full">
-            <img src="images/my.webp" alt=""className='last scale-115'/>
-            <div className="mask-overlay"></div>
+            <div ref={imgRef} className="img-wrapper relative scale-0 overflow-hidden rounded-[6px]  w-full h-full">
+            <img src="images/my.webp" alt="" className='last scale-110'/>
+            {/*<div className="mask-overlay"></div>*/}
             </div>
             </CardTilt>
             <div className="w-full mask py-2">
@@ -120,11 +123,9 @@ const Home = () => {
           </p>
         </div>
       </section>
-      <SlideUp className='h-screen w-full  overflow-hidden'>
-        <div className='w-full h-full'>
-          <Footer />
-        </div>
-      </SlideUp>
+      {/*Content Wrapper **/}
+      <div className='relative w-full min-h-screen '>
+      </div>
     </>
   )
 }
