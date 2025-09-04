@@ -44,6 +44,7 @@
 
 :root{
   --baseBackground:#E8E8E3;
+  /*--baseBackground:#F8F8F8;*/
   --HeadingsText:#080807;
   --Dark:#000;
   --semiDark:#292929;
@@ -92,7 +93,7 @@ body{
     }
 
     button.main-btn{
-        @apply px-4 py-2 lg:px-8 lg:py-3 bg-[var(--accent)] text-[var(--baseBackground)] 
+        @apply px-4 py-2 lg:px-8 lg:py-3 bg-[var(--semiDark)] text-[var(--baseBackground)] 
         cursor-pointer inset-0 border-0 rounded-full font-[satoshi-black] transition-all ease-in-out duration-200
     }
 

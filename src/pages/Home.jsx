@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import SplitText from '../animations/splitText/SplitText.jsx';
 import Reavel from '../animations/Reavel/Reavel.js';
-import greetings from '../context/data.js';
+import {greetings} from '../context/data.js';
 import { CardTilt } from '../components/features/CradTilt.jsx';
 import SplitLine from '../animations/splitText/SplitLine.jsx';
 import MainBtn from '../components/buttons/MainBtn.jsx';
@@ -32,7 +32,6 @@ const Home = () => {
           duration: 1,
           ease: 'power4.inOut',
           onComplete: () => {
-            gsap.to('.anim',{opacity:1,duration:1,delay:0.8});
             gsap.to('.last',{scale:1,delay:0,duration:0.5,ease:'power2.inOut'});
             gsap.to('.fade-in',{opacity:1,delay:0,duration:0.5,ease:'power2.inOut'});
           }
@@ -77,13 +76,10 @@ const Home = () => {
        <Menu />
       </div>
       <section className='relative'>
-        <div ref={headingRef} className='flex-col translate-y-[100%] !z-40 md:translate-y-0 mt-24 md:mt-4 lg:mt-4 ml-4 w-[85%] pointer-events-none flex'>
+        <div ref={headingRef} className='flex-col translate-y-[100%] !z-40 md:translate-y-0 mt-24 md:mt-6  ml-4 w-[85%] pointer-events-none flex'>
           <div className='mask relative -ml-2 md:ml-0 z-40 mt-2'>
-            <h1 className='w-full p-0 md:p-2 whitespace-normal md:whitespace-nowrap'>
+            <h1 className='w-full p-0 md:p-2  whitespace-normal md:whitespace-nowrap'>
               <SplitText text='Creative web' /> 
-              <img src="images/Emoji.webp" alt="" 
-            className='hidden md:inline-block w-[clamp(40px,8vw,120px)] opacity-0 aspect-square 
-            z-[1] md:-translate-x-6 lg:-translate-x-10 anim'/>
             </h1>
           </div>
           <div  className='mask md:ml-4 lg:ml-12 z-50'>
@@ -92,11 +88,10 @@ const Home = () => {
             </h2>
           </div>
         </div>
-        <div className="my-img scale-100 md:scale-75">
+        <div className="my-img scale-100 md:scale-70">
            <CardTilt  className='w-[20vh] h-[23vh] lg:w-[25vw] lg:h-[32vw] md:w-[30vw] md:h-[36vw]'>
             <div ref={imgRef} className="img-wrapper relative scale-0 overflow-hidden rounded-[6px]  w-full h-full">
-            <img src="images/my.webp" alt="" className='last scale-110'/>
-            {/*<div className="mask-overlay"></div>*/}
+            <img src="images/my2.jpg" alt="" className='last scale-110'/>
             </div>
             </CardTilt>
             <div className="w-full mask py-2">
@@ -111,7 +106,7 @@ const Home = () => {
             <SplitLine text='I’m a Frontend Developer and UI Enthusiast who loves 
             crafting modern animated and user-friendly web experiences.' />
           </p>
-          <div className='fade-in ml-2'><MainBtn text={'See Works'} /></div>
+          <div className='fade-in ml-2 md:ml-0'><MainBtn text={'See Works'} /></div>
         </div>
         <div className='w-fit md:w-full absolute bottom-[20%] right-0  md:bottom-0 md:left-0 flex 
           flex-col md:flex-row justify-between md:pb-8 px-4'>
@@ -119,7 +114,7 @@ const Home = () => {
             <SplitText text="2025"/>
           </h5>
           <p ref={SinceRef} className='font-["Neue_Montreal"] text-sm lg:text-xl self-end'>
-            <SplitText text="/ Creating Since 2023" />
+            <SplitText text="/ Creating Since 2024" />
           </p>
         </div>
       </section>

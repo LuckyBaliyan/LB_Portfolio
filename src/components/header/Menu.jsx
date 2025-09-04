@@ -3,6 +3,8 @@ import {useGSAP} from '@gsap/react';
 import gsap from 'gsap';
 import { CustomEase } from 'gsap/all';
 import { Link, NavLink } from 'react-router-dom';
+import {data,socials} from '../../context/data';
+
 
 const Menu = () => {
     gsap.registerPlugin(CustomEase);
@@ -30,30 +32,6 @@ const Menu = () => {
     const targetPath = `M100 0 L200 0 L200 ${window.innerHeight} L100 ${window.innerHeight} Q100 ${
     window.innerHeight / 2
     } 100 0`;
-
-
-    const data = [
-        {
-            name:'Home',
-            link:''
-        },
-        {
-            name:'Works',
-            link:'works',
-        },
-        {
-            name:'About',
-            link:'about',
-        },
-        {
-            name:'Contact',
-            link:'contact'
-        }
-    ]
-
-    const socials = [
-        'Github','Instagramm','Linkdin','Youtube'
-    ]
 
     useEffect(()=>{
         const handleScroll = () => {
@@ -127,7 +105,7 @@ const Menu = () => {
                 data.map((link,i)=>(
                     <h5 key={i} className='mask lg:leading-[1.4]'>
                        <NavLink to={`/${link.link}`}  className={({ isActive }) =>
-                        `p-0 rounded-full transition-all duration-200 whitespace-nowrap ${
+                        `p-0 rounded-full text-start transition-all duration-200 whitespace-nowrap ${
                           isActive ? "bg-[#292929] text-white px-6 " : "text-[#d6d2d2] px-6"
                         }`}>
                         {link.name.split('').map((word,ind)=>(
@@ -141,7 +119,7 @@ const Menu = () => {
         <div className='footer'>
             {
                 socials.map((s,indx)=>(
-                    <p key={indx}>
+                    <p key={indx} className='md:text-md'>
                         {s}
                     </p>
                 ))
