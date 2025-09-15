@@ -91,7 +91,7 @@ const Home = () => {
         <div className="my-img scale-100 md:scale-70">
            <CardTilt  className='w-[20vh] h-[23vh] lg:w-[25vw] lg:h-[32vw] md:w-[30vw] md:h-[36vw]'>
             <div ref={imgRef} className="img-wrapper relative scale-0 overflow-hidden rounded-[6px]  w-full h-full">
-            <img src="images/my2.jpg" alt="" className='last scale-110'/>
+            <img src="images/myImg.webp" alt="" className='last scale-110 grayscale-100'/>
             </div>
             </CardTilt>
             <div className="w-full mask py-2">

@@ -57,7 +57,7 @@ const Transition = (Page) => {
             setShowContent(true);
         }
       },'a');
-    }, []);
+  }, []);
 
   return (
     <>
