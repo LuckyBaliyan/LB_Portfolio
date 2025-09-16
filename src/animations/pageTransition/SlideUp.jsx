@@ -10,7 +10,7 @@ const SlideUp = ({className = '',children}) => {
 
     useGSAP(()=>{
       gsap.to(slideRef.current,{
-        y:-180,
+        y:-250,
         ease:'none',
         scrollTrigger:{
             trigger:slideRef.current,

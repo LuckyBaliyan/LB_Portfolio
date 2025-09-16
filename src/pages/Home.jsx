@@ -11,6 +11,7 @@ import SplitLine from '../animations/splitText/SplitLine.jsx';
 import MainBtn from '../components/buttons/MainBtn.jsx';
 import Menu from '../components/header/Menu.jsx';
 import SlideUp from '../animations/pageTransition/SlideUp.jsx';
+import Marquee from '../components/features/Marquee.jsx';
 
 const Home = () => {
   const loaderRef = useRef(null);
@@ -26,7 +27,6 @@ const Home = () => {
   useGSAP(() => {
     if (!loaderRef.current || !textRef.current) return;
     const tl = gsap.timeline( {onComplete: () => {
-        // Animate loader out after greetings
         gsap.to(loaderRef.current, {
           y: '-100%',
           duration: 1,
@@ -49,6 +49,7 @@ const Home = () => {
     });
   }, []);
 
+
   Reavel(headingRef,{delay:1.5,stagger:0.06,});
   Reavel(nameRef,{delay:1.5,stagger:0.06,});
   Reavel(imgRef,{delay:1.65});
@@ -61,13 +62,13 @@ const Home = () => {
       {/**Loader */}
       <div
         ref={loaderRef}
-        className="fixed top-0 left-0 bg-[#121212] z-[999] w-full h-screen flex items-center justify-center pointer-events-none"
+        className="fixed top-0 left-0 bg-[#121212] z-[998] w-full h-screen flex items-center justify-center pointer-events-none"
       >
       <h4
         ref={textRef}
         className="text-white  font-medium mix-blend-difference greet"
       >
-        <span>&#9679;</span> Welcome
+      <span>&#9679;</span> Welcome
       </h4>
       </div>
       {/** Landing Page */}
@@ -119,8 +120,40 @@ const Home = () => {
         </div>
       </section>
       {/*Content Wrapper **/}
-      <div className='relative w-full min-h-screen '>
+      <div className='hidden relative lg:block'>
+      <SlideUp>
+      <div className='relative w-full pt-24'>
+        <Marquee />
       </div>
+      </SlideUp>
+      </div>
+      {/** Marquee for mobile */}
+      <div className='w-full lg:hidden -mt-6'>
+           <div className='bg-[var(--black)]'>
+           <div className='marquee marquee-mobile'>
+               <h2>
+                   Building <img src="/images/star.avif" alt="" className='mobile-img'/> 
+                   Interactive <img src="/images/star.avif" alt="" className='mobile-img'/> 
+                   Web Experiences <img src="/images/star.avif" alt=""className='mobile-img' /> 
+                   Frontend Developer
+                   Building <img src="/images/star.avif" alt="" className='mobile-img'/> 
+                   Interactive <img src="/images/star.avif" alt="" className='mobile-img'/>
+                   Web Experiences <img src="/images/star.avif" alt="" className='mobile-img'/> 
+                   Creative Developer
+                  <img src="/images/star.avif" alt="" className='mobile-img'/> 
+               </h2>
+                <h2>
+                   Building <img src="/images/star.avif" alt="" className='mobile-img'/> 
+                   Interactive <img src="/images/star.avif" alt="" className='mobile-img' /> 
+                   Web Experiences <img src="/images/star.avif" alt="" className='mobile-img'/> 
+                    Creative Developer
+                   <img src="/images/star.avif" alt="" className='mobile-img'/> 
+               </h2>
+           </div>
+        </div>
+      </div>
+      {/** Text animations */}
+      <div className='min-h-screen w-full bg-transparent-white backdrop-blur-bg'></div>
     </>
   )
 }

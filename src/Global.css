@@ -47,6 +47,7 @@
   /*--baseBackground:#F8F8F8;*/
   --HeadingsText:#080807;
   --Dark:#000;
+  --black:#121212;
   --semiDark:#292929;
   --accent:#E63946;
   --menu:rgb(211, 25, 25);
@@ -140,6 +141,23 @@ body{
         @apply opacity-0;
     }
 
+}
+
+@layer components{
+  .marquee{
+    @apply flex gap-2  w-full space-x-4 py-2;
+  }
+  .marquee-mobile{
+    @apply overflow-hidden;
+  }
+
+  .marquee h2{
+    @apply whitespace-nowrap ml-2 text-4xl md:text-5xl lg:text-7xl tracking-wide text-white !font-[satoshi] lg:pb-3;
+  }
+
+  .marquee h2 img{
+    @apply inline-block w-16 h-16;
+  }
 }
 
 .anim {
@@ -322,5 +340,34 @@ body{
 
   .cross{
     transform: translateY(0);
+  }
+}
+
+/* Marquee-Mobile Styles*/
+
+.marquee-mobile h2{
+    animation: marquee 50s linear infinite;
+    margin-left: -20px;
+}
+
+@keyframes marquee {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.mobile-img{
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from{
+      transform: rotate(0deg);
+  }
+  to{
+      transform: rotate(360deg);
   }
 }
