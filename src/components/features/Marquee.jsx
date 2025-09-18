@@ -1,6 +1,5 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import React from 'react'
 
 const Marquee = () => {
    useGSAP(() => {
@@ -16,9 +15,8 @@ const Marquee = () => {
         }
       });
     
-      // Translate marquee text
       tl.to(marquee, {
-        xPercent: -20,
+        xPercent: -30,
         ease: 'none',
       }, 0); 
     
@@ -37,8 +35,6 @@ const Marquee = () => {
             Web Experiences <img src="/images/star.avif" alt="" /> 
             Creative Developer
             <img src="/images/star.avif" alt="" /> 
-        </h2>
-        <h2 className='translate-x-20'>
             Building <img src="/images/star.avif" alt="" /> 
             Interactive <img src="/images/star.avif" alt="" />
             Web Experiences <img src="/images/star.avif" alt="" /> 

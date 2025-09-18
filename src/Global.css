@@ -54,8 +54,9 @@
 }
 
 body{
-    background-color:var(--baseBackground);
-    overflow-x: hidden;
+  background-color:var(--baseBackground);
+  overflow-x: hidden;
+  width:100%;
 }
 
 ::-webkit-scrollbar{
@@ -75,6 +76,9 @@ body{
     }
     h2{
         @apply text-5xl md:text-8xl lg:text-9xl text-[var(--HeadingsText)]  font-[satoshi-black] font-[900] leading-[0.9] md:tracking-[-7px] lg:tracking-[-9px] translate-y-[0%];
+    }
+    h3{
+      @apply  text-[var(--HeadingsText)] font-[satoshi-bold] font-[700] leading-[1] md:leading-[0.9] md:tracking-[-2px] lg:tracking-[-3px] translate-y-[0%];
     }
     h5{
         @apply md:text-4xl lg:text-6xl;
@@ -145,18 +149,34 @@ body{
 
 @layer components{
   .marquee{
-    @apply flex gap-2  w-full space-x-4 py-2;
+    @apply flex gap-2  space-x-4 py-1 lg:py-2 overflow-hidden lg:w-[150vw];
   }
   .marquee-mobile{
-    @apply overflow-hidden;
+    @apply overflow-hidden ;
   }
 
   .marquee h2{
-    @apply whitespace-nowrap ml-2 text-4xl md:text-5xl lg:text-7xl tracking-wide text-white !font-[satoshi] lg:pb-3;
+    @apply whitespace-nowrap ml-2 text-2xl md:text-5xl tracking-wide text-white !font-[satoshi];
   }
 
   .marquee h2 img{
-    @apply inline-block w-16 h-16;
+    @apply inline-block w-12 h-12 lg:w-16 lg:h-16;
+  }
+
+  .slide{
+    @apply w-full flex gap-2 items-center justify-center;
+  }
+  
+  .slide img{
+    @apply w-22 lg:w-52 aspect-video object-cover self-center object-[50%_15%];
+  }
+
+  .slide h2{
+    @apply text-4xl md:text-7xl lg:text-9xl tracking-normal uppercase;
+  }
+  /* For mobile version of the slide */
+  .elem{
+    @apply w-full flex gap-2 items-center justify-center;
   }
 }
 
@@ -201,8 +221,8 @@ body{
   top:0;
   right: 0;
   width: 540px;
-  height: 100dvh;
-  max-height: 100dvh;
+  height: 100%;
+  min-height: 100dvh;
   background-color:#181717;
   padding:1em 6em;
   display: flex;
@@ -319,6 +339,7 @@ body{
   .main-nav{
     width:100%;
     padding:0.5em 3em;
+    height:100%;
   }
 
   .svg{
@@ -347,7 +368,6 @@ body{
 
 .marquee-mobile h2{
     animation: marquee 50s linear infinite;
-    margin-left: -20px;
 }
 
 @keyframes marquee {
@@ -370,4 +390,13 @@ body{
   to{
       transform: rotate(360deg);
   }
+}
+
+/* Splecial Text Stroke */
+
+.stroke-text {
+  letter-spacing: normal;
+  font-weight: 800;
+  color: transparent;            
+  -webkit-text-stroke: 0.8px black;  
 }

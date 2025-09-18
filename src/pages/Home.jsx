@@ -12,6 +12,9 @@ import MainBtn from '../components/buttons/MainBtn.jsx';
 import Menu from '../components/header/Menu.jsx';
 import SlideUp from '../animations/pageTransition/SlideUp.jsx';
 import Marquee from '../components/features/Marquee.jsx';
+import Message from '../components/sections/Message.jsx';
+import FlipCard from '../components/features/FlipCard.jsx';
+import { flipCardAnimation } from '../animations/cards/flipCard.js';
 
 const Home = () => {
   const loaderRef = useRef(null);
@@ -22,6 +25,7 @@ const Home = () => {
   const lineRef = useRef(null);
   const CopyRef = useRef(null);
   const SinceRef = useRef(null);
+  const cardRef = useRef(null);
 
   
   useGSAP(() => {
@@ -56,6 +60,9 @@ const Home = () => {
   Reavel(lineRef,{delay:1.5,stagger:0.1});
   Reavel(CopyRef,{delay:1.5,stagger:0.06,});
   Reavel(SinceRef,{delay:1.5,stagger:0.06,});
+
+  //Animation for the flipCard
+  flipCardAnimation(cardRef);
   
   return (
     <>
@@ -109,7 +116,7 @@ const Home = () => {
           </p>
           <div className='fade-in ml-2 md:ml-0'><MainBtn text={'See Works'} /></div>
         </div>
-        <div className='w-fit md:w-full absolute bottom-[20%] right-0  md:bottom-0 md:left-0 flex 
+        <div className='w-fit md:w-full absolute bottom-12 -right-6 sm:bottom-[20%] sm:right-0  md:bottom-0 md:left-0 flex 
           flex-col md:flex-row justify-between md:pb-8 px-4'>
           <h5 ref={CopyRef} className='font-["satoshi-black"] text-2xl md:text-4xl lg:text-6xl'>&copy;
             <SplitText text="2025"/>
@@ -122,20 +129,23 @@ const Home = () => {
       {/*Content Wrapper **/}
       <div className='hidden relative lg:block'>
       <SlideUp>
-      <div className='relative w-full pt-24'>
+      <div className='relative w-full pt-24 z-20 marquee-cont'>
         <Marquee />
+      <div className='hidden lg:block min-h-screen pt-32'>
+        <Message />
+      </div>
       </div>
       </SlideUp>
       </div>
       {/** Marquee for mobile */}
-      <div className='w-full lg:hidden -mt-6'>
-           <div className='bg-[var(--black)]'>
+      <div className='w-full lg:hidden -mt-6 md:mt-24'>
+           <div className='bg-[var(--black)] w-[110vw]'>
            <div className='marquee marquee-mobile'>
                <h2>
                    Building <img src="/images/star.avif" alt="" className='mobile-img'/> 
                    Interactive <img src="/images/star.avif" alt="" className='mobile-img'/> 
                    Web Experiences <img src="/images/star.avif" alt=""className='mobile-img' /> 
-                   Frontend Developer
+                   Creative Developer <img src="/images/star.avif" alt=""className='mobile-img' /> 
                    Building <img src="/images/star.avif" alt="" className='mobile-img'/> 
                    Interactive <img src="/images/star.avif" alt="" className='mobile-img'/>
                    Web Experiences <img src="/images/star.avif" alt="" className='mobile-img'/> 
@@ -146,15 +156,58 @@ const Home = () => {
                    Building <img src="/images/star.avif" alt="" className='mobile-img'/> 
                    Interactive <img src="/images/star.avif" alt="" className='mobile-img' /> 
                    Web Experiences <img src="/images/star.avif" alt="" className='mobile-img'/> 
-                    Creative Developer
+                    Creative Developer <img src="/images/star.avif" alt=""className='mobile-img' /> 
+                   <img src="/images/star.avif" alt="" className='mobile-img'/> 
+               </h2>
+                <h2>
+                   Building <img src="/images/star.avif" alt="" className='mobile-img'/> 
+                   Interactive <img src="/images/star.avif" alt="" className='mobile-img' /> 
+                   Web Experiences <img src="/images/star.avif" alt="" className='mobile-img'/> 
+                    Creative Developer <img src="/images/star.avif" alt=""className='mobile-img' /> 
+                   <img src="/images/star.avif" alt="" className='mobile-img'/> 
+               </h2>
+                <h2>
+                   Building <img src="/images/star.avif" alt="" className='mobile-img'/> 
+                   Interactive <img src="/images/star.avif" alt="" className='mobile-img' /> 
+                   Web Experiences <img src="/images/star.avif" alt="" className='mobile-img'/> 
+                    Creative Developer <img src="/images/star.avif" alt=""className='mobile-img' /> 
                    <img src="/images/star.avif" alt="" className='mobile-img'/> 
                </h2>
            </div>
         </div>
       </div>
-      {/** Text animations */}
-      <div className='min-h-screen w-full bg-transparent-white backdrop-blur-bg'></div>
-    </>
+      {/** Text animations for non laptop screens for optimizability*/}
+      <div className='min-h-screen pt-16 md:pt-24 lg:hidden flex flex-col md:gap-4'>
+        <div className="elem elem1">
+        <h3 className='text-5xl md:text-8xl'>
+          I Craft 
+        </h3>
+          <div className="relative img-cont border-dashed border-2 rounded-lg p-2 origin-center">
+              <FlipCard cardRef={cardRef} frontImg='/images/M1 (2).webp' 
+              backImg='/images/M2 (2).webp' className='w-full h-full object-cover'/>
+          </div>
+        </div>
+        <div className="elem elem2">
+          <h3 className='text-6xl md:text-8xl md:whitespace-nowrap text-center uppercase stroke-text'>
+            The Next Gen
+          </h3>
+        </div>
+        <div className="elem elem3 ml-3 sm:ml-0">
+          <h3 className='text-6xl md:text-7xl text-center'>Digital Experiences</h3>
+        </div>
+        <div className="elem4 flex-col items-center gap-2 justify-center">
+          <div className='flex gap-1 items-center justify-center'>
+            <h3 className='text-3xl md:text-4xl text-center'>With</h3>
+          <div className="rounded-full w-22 md:w-42 aspect-video overflow-hidden">
+            <img src="/images/M3 (2).webp" alt="" />
+          </div>
+          </div>
+           <h3 className=" text-6xl md:text-7xl relative mb-2 text-center">Passion
+              <div className="w-3/4  h-[8px] bg-black absolute -bottom-2 left-1/2 translate-x-[-50%]"></div>
+           </h3>
+        </div>
+      </div>
+   </>
   )
 }
 
