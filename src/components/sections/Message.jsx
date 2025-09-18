@@ -68,9 +68,16 @@ useGSAP(() => {
   },'+=1');
 
   tl.to(".slide3 .img-box", {
-    scale:1,
+    scale:1.2,
     duration: 1,
     ease: "back.out(1.7)",
+    onComplete:()=>{
+        gsap.to('.slide3 .img-box',{
+            scale:1,
+            duration:0.5,
+            ease:'power3.inOut',
+        })
+    }
   });
 
   tl.to('.slide4 .masker',{
@@ -105,13 +112,13 @@ useGSAP(() => {
         <div className="pinner flex flex-col items-center justify-center gap-1">
         <div className="slide slide1">
             <h2 className="mask"><SplitText text='I Craft' /></h2>
-            <div className="relative img-box border-dashed border-2 rounded-lg p-2 origin-center scale-0">
+            <div className="relative img-box border-dashed border-2 rounded-lg p-2 origin-center scale-0 will-change-transform">
                 <FlipCard cardRef={cardRef} frontImg='/images/M1 (2).webp' 
                 backImg='/images/M2 (2).webp'/>
             </div>
         </div>
         <div className="slide slide2 relative w-fit self-center">
-         <h2 className="mask stroke-text opacity-0 origin-bottom text-center uppercase">The Next Gen</h2>
+         <h2 className="mask stroke-text opacity-0 will-change-opacity origin-bottom text-center uppercase">The Next Gen</h2>
          <div className="absolute scale-y-0 origin-bottom top-0 left-0 w-full h-full bg-[#121212]"></div>
         </div>
         <div className="slide slide3">
@@ -124,9 +131,9 @@ useGSAP(() => {
         </div>
         <div className="slide slide4 mask">
             <h2 className="masker text-7xl translate-y-[150%] mr-10">With</h2>
-            <div className="rounded-full div scale-x-0 overflow-hidden"><img src="/images/M3 (2).webp" alt="" /></div>
-            <h2 className="scale-0 masker2 relative mb-2">Passion
-              <div className="w-0 masker3 h-[12px] bg-black absolute -bottom-2 left-0"></div>
+            <div className="rounded-full div scale-x-0 will-change-transform overflow-hidden"><img src="/images/M3 (2).webp" alt="" /></div>
+            <h2 className="scale-0 will-change-transform masker2 relative mb-2">Passion
+              <div className="w-0 masker3 will-change-width h-[12px] bg-black absolute -bottom-2 left-0"></div>
             </h2>
         </div>
         </div>
