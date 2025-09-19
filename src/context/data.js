@@ -34,4 +34,13 @@ const socials = [
   'Github','Instagramm','Linkdin','Youtube'
 ]
 
-export {greetings,data,socials};
+const expertise = [
+  'Website Design & Development',
+  'UX/UI Design',
+  'Brand Identity Design',
+  'Motion Animation',
+  'Landing Page Design',
+  'Mobile App Design',
+]
+
+export {greetings,data,socials,expertise};

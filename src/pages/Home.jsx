@@ -15,6 +15,7 @@ import Marquee from '../components/features/Marquee.jsx';
 import Message from '../components/sections/Message.jsx';
 import FlipCard from '../components/features/FlipCard.jsx';
 import { flipCardAnimation } from '../animations/cards/flipCard.js';
+import Expertise from '../components/sections/Expertise.jsx';
 
 const Home = () => {
   const loaderRef = useRef(null);
@@ -182,7 +183,7 @@ const Home = () => {
         <h3 className='text-5xl md:text-8xl'>
           I Craft 
         </h3>
-          <div className="relative img-cont border-dashed border-2 rounded-lg p-2 origin-center">
+          <div className="relative img-cont border-dashed border-2 rounded-lg p-1 origin-center">
               <FlipCard cardRef={cardRef} frontImg='/images/M1 (2).webp' 
               backImg='/images/M2 (2).webp' className='w-full h-full object-cover'/>
           </div>
@@ -207,6 +208,12 @@ const Home = () => {
            </h3>
         </div>
       </div>
+
+      {/*Expertise Section */}
+
+      <section>
+          <Expertise />
+      </section>
    </>
   )
 }

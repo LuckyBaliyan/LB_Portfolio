@@ -402,5 +402,5 @@ body{
   letter-spacing: normal;
   font-weight: 800;
   color: transparent;            
-  -webkit-text-stroke: 0.8px black;  
+  -webkit-text-stroke: 1px black;  
 }
