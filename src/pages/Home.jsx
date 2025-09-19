@@ -123,7 +123,7 @@ const Home = () => {
           <h5 ref={CopyRef} className='font-["satoshi-black"] text-xl sm:text-2xl md:text-4xl lg:text-6xl'>&copy;
             <SplitText text="2025"/>
           </h5>
-          <p ref={SinceRef} className='font-["Neue_Montreal"] text-sm lg:text-xl self-end'>
+          <p ref={SinceRef} className='text-sm lg:text-xl self-end'>
             <SplitText text="/ Creating Since 2024" />
           </p>
         </div>
