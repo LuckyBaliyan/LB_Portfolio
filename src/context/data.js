@@ -35,12 +35,37 @@ const socials = [
 ]
 
 const expertise = [
-  'Website Design & Development',
-  'UX/UI Design',
-  'Brand Identity Design',
-  'Motion Animation',
-  'Landing Page Design',
-  'Mobile App Design',
-]
+  {
+    title: "Website Design & Development",
+    content:
+      "I build high-performing, responsive websites that blend aesthetics with functionality, ensuring seamless user experiences and measurable business results.",
+  },
+  {
+    title: "UX/UI Design",
+    content:
+      "I craft intuitive and user-centric interfaces backed by research, delivering designs that feel effortless to use and keep users engaged.",
+  },
+  {
+    title: "Brand Identity Design",
+    content:
+      "I create bold and cohesive brand identities that communicate your values clearly, leaving a lasting impression across digital and print mediums.",
+  },
+  {
+    title: "Motion Animation",
+    content:
+      "I design sleek, purposeful animations that bring products and interfaces to life, guiding user attention and making interactions memorable.",
+  },
+  {
+    title: "Landing Page Design",
+    content:
+      "I specialize in conversion-focused landing pages with compelling visuals and persuasive layouts that maximize lead generation and sales.",
+  },
+  {
+    title: "Mobile App Design",
+    content:
+      "I design modern, scalable mobile app interfaces that prioritize usability, accessibility, and delight, ensuring users return again and again.",
+  },
+];
+
 
 export {greetings,data,socials,expertise};

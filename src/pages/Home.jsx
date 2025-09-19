@@ -16,6 +16,7 @@ import Message from '../components/sections/Message.jsx';
 import FlipCard from '../components/features/FlipCard.jsx';
 import { flipCardAnimation } from '../animations/cards/flipCard.js';
 import Expertise from '../components/sections/Expertise.jsx';
+import LatestProjects from '../components/sections/LatestProjects.jsx';
 
 const Home = () => {
   const loaderRef = useRef(null);
@@ -208,11 +209,15 @@ const Home = () => {
            </h3>
         </div>
       </div>
-
       {/*Expertise Section */}
-
       <section>
           <Expertise />
+      </section>
+      {/* Latest Projects Section */}
+      <section className='pt-16 lg:pt-32'>
+        <div className="w-full min-h-screen bg-[#121212] rounded-t-4xl px-4 py-2 md:px-6 lg:px-16">
+          <LatestProjects />
+        </div>
       </section>
    </>
   )

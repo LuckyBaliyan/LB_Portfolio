@@ -32,7 +32,7 @@
 }
 
 @font-face {
-    font-family: 'Neue_Montreal'; 
+    font-family: 'Neue'; 
     src: url('/fonts/neuemontreal-regular-webfont.woff2') format('woff2'),
     url('/fonts/neuemontreal-regular-webfont.woff') format('woff');
 }
@@ -45,6 +45,7 @@
 :root{
   --baseBackground:#E8E8E3;
   /*--baseBackground:#F8F8F8;*/
+  --textWhite:#CDCCCC;
   --HeadingsText:#080807;
   --Dark:#000;
   --black:#121212;
@@ -88,7 +89,7 @@ body{
         @apply md:text-4xl lg:text-6xl;
     }
     p{
-        @apply font-[Neue_Montreal];
+        @apply font-[Neue];
     }
     img{
         @apply overflow-y-hidden object-cover w-full h-full;
@@ -98,7 +99,7 @@ body{
     }
 
     li{
-        @apply md:p-2 font-[Neue_Montreal] sm:text-sm lg:text-base sm:leading-[1] md:leading-[2];
+        @apply md:p-2 font-[Neue] sm:text-sm lg:text-base sm:leading-[1] md:leading-[2];
     }
 
     button.main-btn{

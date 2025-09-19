@@ -89,15 +89,16 @@ const Expertise = () => {
                 <>
                <div className='flex justify-between items-center p-2' key={i}>
                 <p className='lg:text-base'>{String(i+1).padStart(2,"0")}</p>
-                <p className='text-start md:text-2xl lg:text-base  justify-self-start'>{e}</p>
-                <div ref={(el) => (btnRefs.current[i] = el)} className='w-6 md:w-8 aspect-square rounded p-1 md:p-2 bg-[var(--black)] cursor-pointer' onClick={()=>toggleInfo(i)}>
+                <p className='text-start md:text-2xl lg:text-[18px] justify-self-start'>{e.title}</p>
+                <div ref={(el) => (btnRefs.current[i] = el)} className='w-6 md:w-8 aspect-square rounded p-1 md:p-2 bg-[var(--black)] 
+                cursor-pointer' onClick={()=>toggleInfo(i)}>
                     <div className='bg-[var(--baseBackground)] w-full aspect-square rounded-full pointer-events-none'></div>
                 </div>
                </div>
-                <div className={`info-${i} flex items-center justify-center overflow-hidden`}>
+                <div  className={`info-${i} flex items-center justify-center overflow-hidden`}>
                    <div className='px-4 py-6 flex items-center justify-center '>
-                     <p className='w-1/2  text-center'>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quas culpa delectus commodi nihil libero nulla quibusdam quo, unde eum.
+                     <p className='lg:w-1/2  text-center'>
+                        {e.content}
                     </p>
                    </div>
                 </div>
