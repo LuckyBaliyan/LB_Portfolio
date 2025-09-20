@@ -68,4 +68,15 @@ const expertise = [
 ];
 
 
-export {greetings,data,socials,expertise};
+const latest  = [
+    {
+        Title:"Web Designs",
+        img:'/images/gf.webp'
+   },
+   { Title: "Minimalist Design", img: "/images/my.webp" },
+   { Title: "Neumorphism UI", img: "/images/x.webp" },
+   { Title: "Glassmorphism", img: "/images/m4.webp" },
+   { Title: "Claymorphism", img: "/images/m2.webp" },
+]
+
+export {greetings,data,socials,expertise,latest};

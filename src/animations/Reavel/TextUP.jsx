@@ -6,7 +6,7 @@ import SplitText from '../splitText/SplitText';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const TextUP = ({text,secText}) => {
+const TextUP = ({text,secText,color}) => {
   const containerRef = useRef(null);
 
   useGSAP(() => {
@@ -30,18 +30,18 @@ const TextUP = ({text,secText}) => {
   return (
     <div className='text-up' ref={containerRef}>
      <div className='flex flex-col  relative leading-[1] mask'>
-     <h1 className='uppercase translate-y-[0%] will-change-transform  text-5xl md:text-8xl lg:text-[12rem] !font-["zentry"] tracking-normal text-[var(--HeadingsText)] !font-[700]'>
+     <h1 className={`uppercase translate-y-[0%] will-change-transform  text-5xl md:text-8xl lg:text-[12rem] !font-["zentry"] tracking-normal text-[var(--HeadingsText)] !font-[700]`}   style={{ color: color ? `var(${color})` : '#121212' }}>
            <SplitText text={text}/>
      </h1> 
-     <h1 className='uppercase translate-y-[0%] will-change-transform absolute top-[100%] left-0 text-5xl md:text-8xl lg:text-[12rem] !font-["zentry"] tracking-normal text-[var(--HeadingsText)] !font-[700]'>
+     <h1 className={`uppercase translate-y-[0%] will-change-transform absolute top-[100%] left-0 text-5xl md:text-8xl lg:text-[12rem] !font-["zentry"] tracking-normal text-[var(--HeadingsText)] !font-[700] `}   style={{ color: color ? `var(${color})` : '#121212' }}>
            <SplitText text={text}/>
      </h1>
      </div> 
      <div className='flex flex-col  leading-[1] relative  mask'>
-     <h1 className='uppercase translate-y-[0%] will-change-transform  text-5xl md:text-8xl lg:text-[12rem] !font-["zentry"] tracking-normal text-[var(--HeadingsText)] !font-[700]'>
+     <h1 className={`uppercase translate-y-[0%] will-change-transform  text-5xl md:text-8xl lg:text-[12rem] !font-["zentry"] tracking-normal text-[var(--HeadingsText)] !font-[700] `}   style={{ color: color ? `var(${color})` : '#121212' }}>
             <SplitText text={secText}/>
      </h1> 
-     <h1 className='uppercase translate-y-[0%] will-change-transform absolute top-[100%] left-0  text-5xl md:text-8xl lg:text-[12rem] !font-["zentry"] tracking-normal text-[var(--HeadingsText)] !font-[700]'>
+     <h1 className={`uppercase translate-y-[0%] will-change-transform absolute top-[100%] left-0  text-5xl md:text-8xl lg:text-[12rem] !font-["zentry"] tracking-normal text-[var(--HeadingsText)] !font-[700] `}   style={{ color: color ? `var(${color})` : '#121212' }}>
            <SplitText text={secText}/>
      </h1>
      </div> 

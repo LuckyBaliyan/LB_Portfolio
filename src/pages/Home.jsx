@@ -123,7 +123,7 @@ const Home = () => {
           <h5 ref={CopyRef} className='font-["satoshi-black"] text-xl sm:text-2xl md:text-4xl lg:text-6xl'>&copy;
             <SplitText text="2025"/>
           </h5>
-          <p ref={SinceRef} className='text-sm lg:text-xl self-end'>
+          <p ref={SinceRef} className=' text-sm lg:text-xl self-end'>
             <SplitText text="/ Creating Since 2024" />
           </p>
         </div>
@@ -214,8 +214,8 @@ const Home = () => {
           <Expertise />
       </section>
       {/* Latest Projects Section */}
-      <section className='pt-16 lg:pt-32'>
-        <div className="w-full min-h-screen bg-[#121212] rounded-t-4xl px-4 py-2 md:px-6 lg:px-16">
+      <section className='pt-16 md:pt-24 lg:pt-32'>
+        <div className="w-full min-h-screen bg-[#121212] rounded-t-4xl px-4 py-6 md:px-6 lg:px-16">
           <LatestProjects />
         </div>
       </section>
