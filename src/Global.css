@@ -419,14 +419,16 @@ body{
 }
 
 .banner h1{
-  font-size: 4rem;
+  font-size: 7rem;
   text-align: center;
   position: absolute;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
   overflow: hidden;
-  font-weight: 400;
+  font-weight: 600;
+  white-space: nowrap;
+  color:#39FF14;
 }
 
 .banner img{
@@ -467,9 +469,9 @@ body{
 
 @media (max-width:1000px) {
   .banner h1{
-    font-size: 1.2rem;
+    font-size: 3.2rem;
   }
   .split{
-    font-size: 1.5rem;
+    font-size: 3.5rem;
   }
 }
