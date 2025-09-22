@@ -75,9 +75,9 @@ const expertise = [
     video: "",
     imges: [],
     stack: [],
-    link: "",
-    status: "under development",
-    github: "",
+    link:null,
+    status: "Not active",
+    github: "https://github.com/LuckyBaliyan/AI_IMAGE_GENERATOR.git",
     para:
       "An AI-powered image generator that creates high-quality visuals quickly and efficiently.",
     content:
@@ -89,9 +89,9 @@ const expertise = [
     video: "",
     imges: [],
     stack: [],
-    link: "",
-    status: "under development",
-    github: "",
+    link: "https://luxora-frontend-rust.vercel.app/",
+    status: "Live",
+    github: "https://github.com/LuckyBaliyan/Brainwave_Matrix_Intern.git",
     para:
       "A luxury-focused MERN stack e-commerce platform designed for premium clothing brands.",
     content:
@@ -103,9 +103,9 @@ const expertise = [
     video: "",
     imges: [],
     stack: [],
-    link: "",
-    status: "under development",
-    github: "",
+    link: "https://anime-reimagine.vercel.app/",
+    status: "Live",
+    github: "https://github.com/LuckyBaliyan/AnimeReimagine.git",
     para:
       "An anime-inspired animated website with immersive GSAP-driven transitions.",
     content:
@@ -117,9 +117,9 @@ const expertise = [
     video: "",
     imges: [],
     stack: [],
-    link: "",
-    status: "under development",
-    github: "",
+    link: "https://api-projects-two.vercel.app/",
+    status: "Live",
+    github: "https://github.com/LuckyBaliyan/API_Projects.git",
     para:
       "A dynamic news portal with real-time search and smooth user interactions.",
     content:
@@ -131,9 +131,9 @@ const expertise = [
     video: "",
     imges: [],
     stack: [],
-    link: "",
+    link: "https://nexa-bridge-dun.vercel.app/",
     status: "under development",
-    github: "",
+    github: "https://github.com/LuckyBaliyan/NexaBridge.git",
     para:
       "An alumni-student connectivity platform with mentorship, jobs, and community features.",
     content:
@@ -141,4 +141,127 @@ const expertise = [
   },
 ];
 
-export {greetings,data,socials,expertise,latest};
+const stacks = [
+  {
+    id:0,
+    name:'Html',
+    img:'/images/html.svg',
+    col:'#FE6D00'
+  },
+  {
+    id:1,
+    name:'Css',
+    img:'/images/css.svg',
+    col:''
+  },
+  {
+    id:2,
+    name:'Js',
+    img:'images/js.svg',
+    col:''
+  },
+  {
+    id:3,
+    name:'tailwindcss',
+    img:'images/tailwind.svg',
+    col:''
+  },
+  { id: 4, name: "Express", img: "images/express-js.png",
+    col:''
+   },
+  {
+    id:5,
+    name:'Node',
+    img:'/images/node.png',
+    col:'#78CB65'
+  },
+    {
+    id:1,
+    name:'Css',
+    img:'/images/css.svg',
+    col:''
+  },
+  { id: 7, name: "Mongoose", img: "images/MongoDB.svg",
+    col:''
+   },
+  { id: 8, name: "Java", img: "images/java.svg",
+    col:''
+   },
+  { id: 9, name: "Python", img: "images/Python.svg" ,
+    col:''
+  },
+  {
+    id:6,
+    name:'React',
+    img:'images/react.png',
+    col:'#78CB65'
+  },
+  { id: 11, name: "GSAP", img: "images/gsap.svg",
+    col:''
+   },
+  { id: 12, name: "Git", img: "images/git.svg",
+    col:''
+   },
+   {
+    id:13,
+    name:'Html',
+    img:'/images/html.svg',
+    col:'#FE6D00'
+  },
+  {
+    id:14,
+    name:'Css',
+    img:'/images/css.svg',
+    col:''
+  },
+  {
+    id:15,
+    name:'Js',
+    img:'images/js.svg',
+    col:''
+  },
+  {
+    id:16,
+    name:'tailwindcss',
+    img:'images/tailwind.svg',
+    col:''
+  },
+  { id: 17, name: "Express", img: "images/express-js.png",
+    col:''
+   },
+  {
+    id:18,
+    name:'Node',
+    img:'/images/node.png',
+    col:'#78CB65'
+  },
+    {
+    id:19,
+    name:'React',
+    img:'images/react.png',
+    col:'#78CB65'
+  },
+  { id: 20, name: "Mongoose", img: "images/MongoDB.svg",
+    col:''
+   },
+  { id: 21, name: "Java", img: "images/java.svg",
+    col:''
+   },
+  { id: 22, name: "Python", img: "images/Python.svg" ,
+    col:''
+  },
+  { id: 23, name: "C", img: "images/C2.svg",
+    col:''
+   },
+  { id: 24, name: "GSAP", img: "images/gsap.svg",
+    col:''
+   },
+  { id: 25, name: "Git", img: "images/git.svg",
+    col:''
+   },
+  { id: 26, name: "Java", img: "images/java.svg",
+  }
+
+];
+
+export {greetings,data,socials,expertise,latest,stacks};

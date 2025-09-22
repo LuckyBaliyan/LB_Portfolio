@@ -419,7 +419,8 @@ body{
 }
 
 .banner h1{
-  font-size: 7rem;
+  font-size: 6.4rem;
+  font-family: "Zentry";
   text-align: center;
   position: absolute;
   top:50%;
@@ -428,7 +429,9 @@ body{
   overflow: hidden;
   font-weight: 600;
   white-space: nowrap;
-  color:#39FF14;
+  letter-spacing: normal;
+  /*color:#39FF14;*/
+  color:#fff;
 }
 
 .banner img{
@@ -474,4 +477,14 @@ body{
   .split{
     font-size: 3.5rem;
   }
+}
+
+
+
+.slideEven{
+  transform: translateY(30%);
+}
+
+.slideOdd{
+  transform: translateY(-30%);
 }

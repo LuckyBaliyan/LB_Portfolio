@@ -61,7 +61,7 @@ const LatestProjects = () => {
           }, {
             y: 0,
             ease: 'none',
-            stagger: 0.02,
+            stagger: 0.08,
           })
         });
 
@@ -120,7 +120,7 @@ const LatestProjects = () => {
       <div>
         {latest.map((item, index) => (
           <div key={index} className='banner'>
-            <h1 className='split italic px-8 py-2'>
+            <h1 className={`split italic px-8 py-2 ${index === (latest.length - 1)?'!text-[#121212]':''}`}>
               {item.Title.split('').map((char, i) => (
                 <span className='down' key={i}>{char}</span>
               ))}
@@ -131,8 +131,10 @@ const LatestProjects = () => {
             </div>
             <div className='flex flex-col lg:flex-row justify-between in gap-1  items-center absolute bottom-[10%] left-[5%] w-[90%]'>
                <div className='flex gap-2'>
-                   <ProjectsBtn text="Visit" icon={<CiGlobe />} />
-                   <ProjectsBtn text="GitHub" icon={<FaGithub />} />
+                {item.link &&
+                   <ProjectsBtn link={item.link} text="Visit" icon={<CiGlobe />} />
+                }
+                   <ProjectsBtn link={item.github} text="GitHub" icon={<FaGithub />} />
                </div>
                <div className='flex gap-1 cursor-pointer hover:scale-110 transition  items-center'>
                 <p className='mix-blend-difference text-white  underline text-2xl font-extrabold'>View Project</p>

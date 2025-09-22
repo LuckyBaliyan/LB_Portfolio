@@ -17,6 +17,7 @@ import FlipCard from '../components/features/FlipCard.jsx';
 import { flipCardAnimation } from '../animations/cards/flipCard.js';
 import Expertise from '../components/sections/Expertise.jsx';
 import LatestProjects from '../components/sections/LatestProjects.jsx';
+import TechStack from '../components/sections/TechStack.jsx';
 
 const Home = () => {
   const loaderRef = useRef(null);
@@ -218,6 +219,13 @@ const Home = () => {
         <div className="w-full min-h-screen bg-[#121212] rounded-t-4xl px-4 py-6 md:px-6 lg:px-16">
           <LatestProjects />
         </div>
+      </section>
+      {/**Tech Stack */}
+      <section className='mt-0 md:-mt-2 lg:mt-0 relative'>
+        <TechStack />
+      </section>
+      <section>
+        
       </section>
    </>
   )
