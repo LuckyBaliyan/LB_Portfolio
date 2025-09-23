@@ -86,8 +86,8 @@ const Expertise = () => {
     <div className='w-full mt-6'>
         <div className='w-full lg:w-[80%] ml-auto flex flex-col gap-2 lg:gap-1'>
             {expertise.map((e,i)=>(
-                <>
-               <div className='flex justify-between items-center p-2' key={i}>
+            <div  key={i}>
+               <div className='flex justify-between items-center p-2'>
                 <p className='lg:text-base'>{String(i+1).padStart(2,"0")}</p>
                 <p className='text-start md:text-2xl lg:text-[18px] justify-self-start'>{e.title}</p>
                 <div ref={(el) => (btnRefs.current[i] = el)} className='w-6 md:w-8 aspect-square rounded p-1 md:p-2 bg-[var(--black)] 
@@ -95,7 +95,7 @@ const Expertise = () => {
                     <div className='bg-[var(--baseBackground)] w-full aspect-square rounded-full pointer-events-none'></div>
                 </div>
                </div>
-                <div  className={`info-${i} flex items-center justify-center overflow-hidden`}>
+                <div className={`info-${i} flex items-center justify-center overflow-hidden`}>
                    <div className='px-4 py-6 flex items-center justify-center '>
                      <p className='lg:w-1/2  text-center'>
                         {e.content}
@@ -103,7 +103,7 @@ const Expertise = () => {
                    </div>
                 </div>
                <hr />
-               </>
+               </div>
             ))}
         </div>
     </div>

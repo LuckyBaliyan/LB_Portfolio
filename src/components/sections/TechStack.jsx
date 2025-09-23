@@ -102,7 +102,7 @@ useEffect(() => {
                 <TextUP text={"My"} secText={"Stack"} color={'--textWhite'}/>
                 <p className='text-[var(--textWhite)] text-center md:text-2xl lg:text-base lg:text-start w-full lg:w-[45%] leading-tight'>
                     These are the tools I harnessed to bring ideas to life and craft solutions that are both functional and visually striking.
-                     Each technology empowered me to build smarter, faster, and cooler projects. 
+                    Each technology empowered me to build smarter, faster, and cooler projects. 
                 </p>
             </div>
             <div className='stack-container lg:rotate-15  lg:mt-32 relative'>

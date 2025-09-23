@@ -18,6 +18,7 @@ import { flipCardAnimation } from '../animations/cards/flipCard.js';
 import Expertise from '../components/sections/Expertise.jsx';
 import LatestProjects from '../components/sections/LatestProjects.jsx';
 import TechStack from '../components/sections/TechStack.jsx';
+import AllProjects from '../components/sections/AllProjects.jsx';
 
 const Home = () => {
   const loaderRef = useRef(null);
@@ -225,7 +226,7 @@ const Home = () => {
         <TechStack />
       </section>
       <section>
-        
+        <AllProjects />
       </section>
    </>
   )

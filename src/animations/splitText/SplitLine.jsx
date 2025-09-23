@@ -8,7 +8,7 @@ const SplitLine = ({ text, className = "" }) => {
       {lines.map((line, i) => (
         <span
           key={i}
-          className={`reveal-line block translate-y-[200%] ${className}`}
+          className={`reveal-line block  translate-y-[200%] ${className}`}
           aria-hidden="true"
         >
           {line}

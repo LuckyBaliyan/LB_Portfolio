@@ -6,7 +6,7 @@ import SplitText from '../splitText/SplitText';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const TextUP = ({text,secText,color}) => {
+const TextUP = ({text,secText,color,className=''}) => {
   const containerRef = useRef(null);
 
   useGSAP(() => {
@@ -29,7 +29,7 @@ const TextUP = ({text,secText,color}) => {
 
   return (
     <div className='text-up' ref={containerRef}>
-     <div className='flex flex-col  relative leading-[1] mask'>
+     <div className={`flex flex-col  relative leading-[1] mask`}>
      <h1 className={`uppercase translate-y-[0%] will-change-transform  text-5xl md:text-8xl lg:text-[12rem] !font-["zentry"] tracking-normal text-[var(--HeadingsText)] !font-[700]`}   style={{ color: color ? `var(${color})` : '#121212' }}>
            <SplitText text={text}/>
      </h1> 
