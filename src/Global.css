@@ -88,6 +88,9 @@ body{
     h5{
         @apply md:text-4xl lg:text-6xl;
     }
+    h4{
+      @apply font-[Neue] font-semibold uppercase text-4xl  lg:text-7xl;
+    }
     p{
         @apply font-[Neue];
     }
@@ -487,4 +490,14 @@ body{
 
 .slideOdd{
   transform: translateY(-30%);
+}
+
+.scale-transition .scale-overlay{
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: all ease 0.3s;
+}
+
+.scale-transition:hover .scale-overlay{
+  transform: scaleY(1)
 }

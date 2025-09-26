@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { FaArrowRight } from "react-icons/fa";
 
 const MovingCard = ({ images, activeIndex, width = 250, height = 300, x, y, opacity }) => {
   const boxRef = useRef(null);
   const frontRefs = useRef([]);
   const backRefs = useRef([]);
 
-  // Smooth follow for position
   useEffect(() => {
     if (!boxRef.current) return;
     const xTo = gsap.quickTo(boxRef.current, "x", { duration: 0.4, ease: "power3.out" });
@@ -15,7 +15,7 @@ const MovingCard = ({ images, activeIndex, width = 250, height = 300, x, y, opac
     yTo(y);
   }, [x, y]);
 
-  // Animate active image reveal
+
   useEffect(() => {
     if (activeIndex === null || !frontRefs.current[activeIndex]) return;
 
@@ -69,8 +69,9 @@ const MovingCard = ({ images, activeIndex, width = 250, height = 300, x, y, opac
         height,
         opacity
       }}
-      className="pointer-events-none overflow-hidden"
+      className="pointer-events-none hidden lg:block overflow-hidden z-[50] lg:z-[20]"
     >
+    <FaArrowRight className='text-white lg:hidden mix-blend-difference z-[50] absolute bottom-0 left-1/2 underline text-3xl font-extrabold -rotate-45'/>
       {images.map((src, i) => (
         <React.Fragment key={i}>
           {/* Back Layer */}

@@ -19,6 +19,7 @@ import Expertise from '../components/sections/Expertise.jsx';
 import LatestProjects from '../components/sections/LatestProjects.jsx';
 import TechStack from '../components/sections/TechStack.jsx';
 import AllProjects from '../components/sections/AllProjects.jsx';
+import Ideas from '../components/sections/Ideas.jsx';
 
 const Home = () => {
   const loaderRef = useRef(null);
@@ -225,8 +226,15 @@ const Home = () => {
       <section className='mt-0 md:-mt-2 lg:mt-0 relative'>
         <TechStack />
       </section>
+      {/* Projects Works */}
       <section>
         <AllProjects />
+      </section>
+      {/** Ideas in motion */}
+      <section className='mt-16'>
+          <SlideUp>
+            <Ideas/>
+          </SlideUp>
       </section>
    </>
   )
