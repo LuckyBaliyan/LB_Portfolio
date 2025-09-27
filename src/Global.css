@@ -111,7 +111,7 @@ body{
     }
 
     footer{
-        @apply h-screen w-full;
+        @apply min-h-screen w-full;
     }
 }
 
@@ -505,6 +505,7 @@ body{
 /** Clipped idea **/
 .cmm{
   transition: all 0.4s ease-in-out;
+  will-change: width;
 }
 
 .cm:hover .cmm{
@@ -513,8 +514,9 @@ body{
 
 .cn{
   transition: all 0.4s ease-in-out;
+  will-change: transform;
 }
 
 .cm:hover .cn{
-  transform: rotate(90deg);
+  transform: rotate(90deg) scale(1);
 }

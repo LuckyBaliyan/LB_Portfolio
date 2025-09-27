@@ -13,10 +13,10 @@ const Ideas = () => {
   const containerRef = useRef([]);
   const rightRef = useRef(null);
 
-  // new refs for the hover-reveal section
+
   const clipImagesRef = useRef([]);
   const headingsRef = useRef([]);
-  const activeIndex = useRef(0); // track active image
+  const activeIndex = useRef(0); 
 
   useEffect(() => {
     const handleLoad = () => {
@@ -95,8 +95,8 @@ const Ideas = () => {
     clipImagesRef.current.forEach((img, i) => {
       gsap.set(img, { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)", scale: 1.2 });
     });
-    
-    // Hover / leave logic
+  
+
     headingsRef.current.forEach((heading, i) => {
       heading.addEventListener("mouseenter", () => {
         clipImagesRef.current.forEach((img, j) => {
@@ -121,7 +121,6 @@ const Ideas = () => {
       });
     
       heading.addEventListener("mouseleave", () => {
-        // On leave, return all images to initial state (clipped)
         clipImagesRef.current.forEach((img, j) => {
           gsap.to(img, {
             clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
@@ -162,10 +161,11 @@ const Ideas = () => {
         }
       </div>
 
-      {/* ✨ NEW HOVER-REVEAL SECTION */}
+
       <div className="hidden lg:flex w-full h-screen justify-between px-16 items-center mt-32">
         {/* LEFT IMAGES */}
-        <div className="relative w-[35vw] h-[37vw] overflow-hidden" style={{backgroundImage:`url(images/m1.webp)`,backgroundPosition:'center',
+        <div className="relative w-[35vw] h-[37vw] overflow-hidden"
+        style={{backgroundImage:`url(images/m1.webp)`,backgroundPosition:'center',
             backgroundSize:'cover',backgroundRepeat:'no-repeat'
         }}>
           {["images/dig.webp", "images/p5.webp", "images/idea3.webp"].map((src, i) => (
@@ -188,7 +188,7 @@ const Ideas = () => {
               className="cursor-pointer group cm"
             >
               <h4 className="text-7xl font-[satoshi] inline-block tracking-normal font-bold">{title}&nbsp;
-                <ImCross className='cn inline-block text-4xl'/></h4>
+                <ImCross className='cn inline-block text-4xl scale-80 origin-center'/></h4>
               <div className='bg-black w-0 h-[2px] cmm'></div>
             </div>
           ))}
