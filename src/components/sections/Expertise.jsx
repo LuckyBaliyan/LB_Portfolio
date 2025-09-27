@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { expertise } from '../../context/data'
 import gsap from 'gsap';
 import TextUP from '../../animations/Reavel/TextUP';
+import { FaPlus } from "react-icons/fa";
 
 const Expertise = () => {
     const btnRefs = useRef([]);
@@ -92,7 +93,7 @@ const Expertise = () => {
                 <p className='text-start md:text-2xl lg:text-[18px] justify-self-start'>{e.title}</p>
                 <div ref={(el) => (btnRefs.current[i] = el)} className='w-6 md:w-8 aspect-square rounded p-1 md:p-2 bg-[var(--black)] 
                 cursor-pointer' onClick={()=>toggleInfo(i)}>
-                    <div className='bg-[var(--baseBackground)] w-full aspect-square rounded-full pointer-events-none'></div>
+                   <FaPlus className='text-[var(--baseBackground)]'/>
                 </div>
                </div>
                 <div className={`info-${i} flex items-center justify-center overflow-hidden`}>

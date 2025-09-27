@@ -1,9 +1,10 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import SlideUp from '../../animations/pageTransition/SlideUp';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { ImCross } from "react-icons/im";
+import { FaPlay } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,6 +18,8 @@ const Ideas = () => {
   const clipImagesRef = useRef([]);
   const headingsRef = useRef([]);
   const activeIndex = useRef(0); 
+
+  const [isImage,setIsimage] = useState(true);
 
   useEffect(() => {
     const handleLoad = () => {
@@ -142,7 +145,13 @@ const Ideas = () => {
         <h4 ref={wordRef}>in Motion)</h4>
       </div>
       <div className='w-full relative overflow-hidden h-screen mt-6'>
-        <img ref={imageRef} src="images/idea3.webp" alt="" className='w-full h-full' />
+        <div ref={imageRef} className='w-full h-full'>
+        <div onClick={()=>setIsimage(prev=>!prev)} className='bg-[#121212] hidden cursor-pointer text-white lg:flex items-center justify-center rounded-full absolute top-1/2 left-1/2 z-30 p-2 w-30 aspect-square'>
+         <FaPlay className='text-4xl'/>
+        </div>
+        <img src="images/idea3.webp" alt="" className={`w-full h-full relative z-10 ${isImage?'opacity-100':'opacity-0'}` } />
+        <video src="videos/ideas2.mp4" loop muted autoPlay className='size-120 hidden lg:block lg:size-169 object-cover  inset-0  absolute top-0 lg:left-1/3 '></video>
+       </div>
       </div>
       <h4 ref={rightRef} className='md:hidden translate-x-[100%]'>in Motion)</h4>
       <div className='lg:ml-auto w-fit px-4 mt-6'>
@@ -168,7 +177,7 @@ const Ideas = () => {
         style={{backgroundImage:`url(images/m1.webp)`,backgroundPosition:'center',
             backgroundSize:'cover',backgroundRepeat:'no-repeat'
         }}>
-          {["images/dig.webp", "images/p5.webp", "images/idea3.webp"].map((src, i) => (
+          {["images/left-i.jpeg", "images/p5.webp", "images/idea3.webp"].map((src, i) => (
             <img
               key={i}
               ref={(el) => (clipImagesRef.current[i] = el)}
