@@ -14,19 +14,19 @@ const greetings = [
  const data = [
    {
        name:'Home',
-       link:''
+       link:'/'
    },
    {
        name:'Works',
-       link:'works',
+       link:'/works',
    },
    {
        name:'About',
-       link:'about',
+       link:'/about',
    },
    {
        name:'Contact',
-       link:'contact'
+       link:'/contact'
    }
 ]
 
