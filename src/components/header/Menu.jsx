@@ -104,7 +104,7 @@ const Menu = () => {
             {
                 data.map((link,i)=>(
                     <h5 key={i} className='mask lg:leading-[1.4]'>
-                       <NavLink to={`/${link.link}`}  className={({ isActive }) =>
+                       <NavLink to={`${link.link}`}  className={({ isActive }) =>
                         `p-0 rounded-full text-start transition-all duration-200 whitespace-nowrap ${
                           isActive ? "bg-[#292929] text-white px-6 " : "text-[#d6d2d2] px-6"
                         }`}>

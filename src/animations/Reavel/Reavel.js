@@ -20,6 +20,7 @@ const Reavel = (ref,options={}) => {
     if(lines.length){
       gsap.to(lines,{
       y:0,
+      opacity:1,
       ease:options.ease || 'power2.out',
       duration:options.duration || 0.4,
       stagger:options.stagger || 0.03,

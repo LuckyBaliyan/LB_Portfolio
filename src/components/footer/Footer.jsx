@@ -69,16 +69,16 @@ const Footer = () => {
             T
             <img
               ref={el => imagesRef.current[0] = el}
-              src='images/my1.jpg'
+              src='/images/my1.jpg'
               alt=''
               className='lg:w-24 w-8 md:w-16 aspect-square inline-block rounded-full object-cover'
             />
             gether
           </h1>
 
-          <div onClick={()=>navigate('Contact')}  ref={el => imagesRef.current[1] = el} className='w-18 lg:w-24 aspect-square rounded-full cursor-pointer bg-[var(--accent)] p-4'>
+          <div onClick={()=>navigate('/contact')}  ref={el => imagesRef.current[1] = el} className='w-18 lg:w-24 aspect-square rounded-full cursor-pointer bg-[var(--accent)] p-4'>
             <img
-              src="images/arrow.svg"
+              src="/images/arrow.svg"
               alt=""
               className='object-cover'
             />
