@@ -2,17 +2,19 @@ import React, { useEffect, useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import { latest } from '../../context/data';
+import { allProjects, latest } from '../../context/data';
 import TextUP from '../../animations/Reavel/TextUP';
 import { CiGlobe } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import ProjectsBtn from '../buttons/ProjectsBtn';
 import { FaArrowRight } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger); 
 
 const LatestProjects = () => {
   const containerRef = useRef(null);
+  const navigate = useNavigate();
 
  
   //bhai always use it ....
@@ -118,7 +120,7 @@ const LatestProjects = () => {
       </div>
 
       <div>
-        {latest.map((item, index) => (
+        {allProjects.slice(0,5).map((item, index) => (
           <div key={index} className='banner'>
             <h1 className={`split italic px-8 py-2 ${index === (latest.length - 1)?'!text-[#121212]':''}`}>
               {item.Title.split('').map((char, i) => (
@@ -136,7 +138,7 @@ const LatestProjects = () => {
                 }
                    <ProjectsBtn link={item.github} text="GitHub" icon={<FaGithub />} />
                </div>
-               <div className='flex gap-1 cursor-pointer hover:scale-110 transition  items-center'>
+               <div onClick={()=> navigate(`/project/${item.id}`)} className='flex gap-1 cursor-pointer hover:scale-110 transition  items-center'>
                 <p className='mix-blend-difference text-white  underline text-2xl font-extrabold'>View Project</p>
                 <FaArrowRight className='text-white mix-blend-difference underline text-2xl font-extrabold -rotate-45'/>
                </div>

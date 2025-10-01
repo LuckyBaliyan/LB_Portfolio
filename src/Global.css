@@ -521,3 +521,25 @@ body{
   transform: rotate(90deg) scale(1);
 }
 
+/* Flip card styles */
+.perspective {
+  perspective: 1000px;
+}
+
+.custom-border {
+  clip-path:polygon(0 100%, 0 71%, 7% 62%, 7% 12%, 21% 0, 100% 0, 100% 79%, 89% 100%);
+  overflow: hidden;
+}
+
+.parallax-anim{
+  animation: paralax-anim 4s ease-in-out infinite alternate;
+}
+
+@keyframes paralax-anim {
+  from{
+    transform: translateY(0) scale(1);
+  }
+  to{
+    transform: translateY(-9px) scale(1.005);
+  }
+}

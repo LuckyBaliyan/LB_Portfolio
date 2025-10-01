@@ -1,5 +1,5 @@
 import React, { useRef, useLayoutEffect,useEffect } from 'react'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Nav from '../components/header/Nav';
 import Footer from '../components/footer/Footer';
 import Menu from '../components/header/Menu';
@@ -11,17 +11,31 @@ import SplitLine from '../animations/splitText/SplitLine';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { IoMdArrowDown } from "react-icons/io";
-import SkillsCard from '../components/cards/SkillsCard';
+import FlipCard from '../animations/cards/FlipCard.jsx';
+import { FaArrowRight } from "react-icons/fa";
+import ProjectsBtn from '../components/buttons/ProjectsBtn.jsx';
+import { CiGlobe } from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
 
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Project = () => {
-    const { projectId }= useParams();
+const ProjectWrapper = () => {
+  const { projectId } = useParams();
+  return <Project key={projectId} projectId={projectId} />;
+};
+
+
+const Project = ({projectId}) => {
     const project = allProjects.find((p)=> p.id === parseInt(projectId));
+    const currentIndex = allProjects.findIndex(p => p.id === parseInt(projectId));
+    const nextProject = allProjects[(currentIndex + 1) % allProjects.length];
+
+
     const headingRef = useRef(null);
     const paraRef = useRef(null);
     const scaleUpRef = useRef(null);
+    const opacityRef = useRef(null);
     const imageRef = useRef(null);
     const spanRefs = useRef([]);
     const imageRefs = useRef([]);
@@ -29,10 +43,23 @@ const Project = () => {
     const videoContainerRef = useRef(null);
     const wordsRef = useRef([]);
     const parasRef = useRef([]);
+    const counterRef = useRef(null);
+    
 
 
     Reavel(headingRef,{delay:1,stagger:0.04});
     Reavel(paraRef,{delay:1,stagger:0.04});
+
+    const navigate = useNavigate();
+
+    const handleNextProject = () => {
+      const nextId = project.id + 1;
+      if (nextId > allProjects.length) {
+        navigate(`/project/1`); 
+      } else {
+        navigate(`/project/${nextId}`);
+      }
+    };
 
     
     useEffect(() => {
@@ -61,6 +88,15 @@ const Project = () => {
             }
         });
 
+        gsap.fromTo(opacityRef.current,{
+         clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+        },{
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+          duration:1,
+          delay:1,
+          ease:'circ.inOut',
+        })
+
         gsap.to(parasRef.current,{
         y:0,
         opacity:1,
@@ -70,7 +106,6 @@ const Project = () => {
        })
 
         tl.to(imageRef.current, { scale: 1, ease: 'power1.out' }, 0); 
-        //tl.fromTo(wordsRef.current,{opacity:0,y:100},{opacity:1,y:0,ease:'none',stagger:0.05});
 
         gsap.to(spanRefs.current,{
             opacity:1,
@@ -155,9 +190,32 @@ const Project = () => {
                 toggleActions:'play none none reverse',
                 once:true,
             }
-        })
+      });
 
-    }, []);
+    let ctx = gsap.context(() => {
+    if (counterRef.current) {
+      ScrollTrigger.create({
+        trigger: counterRef.current,
+        start: "top 60%", 
+        end: "bottom+=600 top",
+        onEnter: () => {
+          if(project.id === allProjects.length + 1){
+            counterRef.current.innerHTML = `Project-${String(1).padStart(2, "0")}`
+          }
+          else{
+          counterRef.current.innerHTML = `Project-${String(project.id + 1).padStart(2, "0")}`;
+          }
+        },
+        onLeaveBack: () => {
+          counterRef.current.innerHTML = `Project-${String(project.id).padStart(2, "0")}`;
+        },
+      });
+    }
+  });
+
+  return () => ctx.revert(); 
+
+  }, [project.id]);
 
     return (
       <>
@@ -179,14 +237,14 @@ const Project = () => {
                     Scroll  <IoMdArrowDown className='text-center inline-block'/></p>
                 <p ref={(el)=>parasRef.current[2] = el} className='font-[Neue] text-gray-600 uppercase opacity-0 will-change-transform translate-y-[100%]'>CREATED {project.Date}</p>
             </div>
-            <div className='w-[100%] min-h-screen relative overflow-hidden ml-auto mr-auto mt-4'>
-                <img ref={imageRef} src={project.img} alt="" className='absolute inset-0 scale-150 w-full h-full object-cover z-10'/>
+            <div ref={opacityRef} className='w-[100%]  min-h-screen relative overflow-hidden ml-auto mr-auto mt-4'>
+                <img ref={imageRef} src={project.img} alt="" className='absolute inset-0  scale-150 w-full h-full object-cover z-10'/>
             </div>
         </section>
         <section className='min-h-screen'>
-            <h4 className='md:w-1/2 md:text-2xl text-xl lg:text-5xl ml-auto px-4'>
-                {project.para.split('').map((w,i)=>(
-                    <span key={i} ref={(el)=>spanRefs.current[i] = el} className='inline-block opacity-20 lg:p-[1px] span-reveal'>
+            <h4 className='md:w-[60%] md:text-2xl text-xl lg:text-5xl ml-auto px-4'>
+                {project.para.split(' ').map((w,i)=>(
+                    <span key={i} ref={(el)=>spanRefs.current[i] = el} className='inline-block opacity-20 lg:p-[3px] span-reveal'>
                         {w}
                     </span>
                 ))}
@@ -224,7 +282,7 @@ const Project = () => {
             </div>
             </div>
 
-            <div className='relative mt-[90vh] md:mt-[100vh] lg:mt-[90vh] px-4'>
+            <div className='relative mt-[90vh] md:mt-[130vh] lg:mt-[90vh] px-4'>
                <p className='text-sm md:text-2xl font-bold mask'>{project.content.split(' ').map((w,i)=>(
                 <span ref={(el) => wordsRef.current[i] = el} key={i} className='inline-block p-[2px]'>{w}</span>
                ))}
@@ -232,13 +290,32 @@ const Project = () => {
             </div>
         </section>
         <section className='mt-32 px-4'>
-            <h4 className='text-center lg:text-start'>Tech Used</h4>
-            <div className='flex flex-wrap items-center w-full justify-center lg:justify-start  lg:w-[28%] gap-2'>
-                {
-                project.stack.map((s,i)=>(
-                    <p key={i}  className='bg-[var(--accent)] text-xs sm:text-base uppercase py-2 px-2 sm:px-4 lg:px-6 rounded-full'>{s}</p>
-                ))
-               }            
+            <div className='flex flex-col gap-4 lg:justify-between lg:flex-row px-4 h-[130vh] sm:h-[110vh] lg:h-[150vh]'>
+              <div>
+                 <h4 className='text-center lg:text-start'>Stack Used</h4>
+                  <div className='flex flex-wrap mt-4 items-center w-full justify-center lg:justify-start lg:w-[50%] gap-2'>
+                      {
+                      project.stack.map((s,i)=>(
+                          <p key={i}  className='bg-[var(--accent)] text-xs sm:text-base uppercase py-2 px-2 sm:px-4 lg:px-6 rounded-full'>{s}</p>
+                      ))
+                     }            
+                  </div>
+                  <div className='flex w-full justify-center lg:justify-start gap-4 mt-6'>
+                    {project.link &&
+                    <ProjectsBtn link={project.link} text="Visit" icon={<CiGlobe />} />
+                    }
+                    <ProjectsBtn link={project.github} text="GitHub" icon={<FaGithub />} />
+                  </div>
+              </div>
+              <div className='flex items-center mt-16 md:mt-24 lg:mt-0 flex-col md:gap-4'>
+                <FlipCard frontImage={project.img} backImage={nextProject.img} />
+                 <div  onClick={()=>handleNextProject()}  className='flex gap-2 cursor-pointer'>
+                  <h5 ref={counterRef}  className='font-[Neue] !xs:text-base sm:text-2xl  md:text-3xl project-no uppercase font-semibold'>Project-{String(project.id).padStart(2,"0")}</h5>
+                  {projectId !== project.id &&
+                 <FaArrowRight className='text-black lg:text-3xl font-extrabold  -rotate-45'/>
+                  }
+                 </div>
+              </div>
             </div>
         </section>
         <footer>
@@ -248,4 +325,4 @@ const Project = () => {
     )
 }
 
-export default Transition(Project);
+export default Transition(ProjectWrapper);

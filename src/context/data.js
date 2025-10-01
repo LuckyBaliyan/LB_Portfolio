@@ -70,6 +70,7 @@ const expertise = [
 
   const latest = [
   {
+    id:1,
     Title: "Davinchi",
     img: "/images/gf.webp",
     video: "",
@@ -84,6 +85,7 @@ const expertise = [
       "Davinchi is an advanced AI-based image generator that converts text prompts into unique, high-resolution visuals, designed with a focus on performance, reliability, and accessibility. I optimized the system with efficient model handling, asynchronous data flows, and caching to ensure users get results in real time without delays. The platform is fully responsive, featuring a modern and minimal UI that adapts seamlessly across devices, and I implemented lazy loading and error-handling strategies to enhance stability when handling heavy image outputs. This project strengthened my skills in integrating AI models with web applications, managing computationally intensive tasks, and designing systems that remain fast and intuitive under load. More importantly, it allowed me to refine the balance between complex back-end processes and a user-friendly interface. The impact of Davinchi lies in enabling designers, creators, and businesses to generate visuals instantly, making creative workflows faster and more accessible. This project showcases my ability to combine AI, optimization techniques, and polished front-end design into a real-world solution with significant practical value.",
   },
   {
+    id:2,
     Title: "Luxora",
     img: "/images/p3 (1).webp",
     video: "",
@@ -98,6 +100,7 @@ const expertise = [
       "Luxora is a full-stack MERN e-commerce application crafted for premium clothing brands, developed with the goal of delivering a high-end, luxury shopping experience to customers. The platform features advanced payment integration through Razorpay, support for cash-on-delivery, and real-time order tracking, giving users full transparency throughout their shopping journey. To elevate the user experience, I implemented Lenis for smooth scrolling and designed a clean, modern interface that emphasizes the exclusivity of the brand’s products. The system is fully responsive, optimized with lazy loading, API call optimization, and MongoDB indexing to handle performance at scale. Building Luxora allowed me to gain practical experience in developing secure transactions, building scalable architectures, and creating reliable order management systems. I also learned to refine the UI/UX flow so that every detail, from product discovery to checkout, feels seamless and intuitive. The impact of Luxora lies in how it combines business-ready features with polished design, showcasing my ability to deliver end-to-end solutions that not only work technically but also resonate with customers by driving trust, engagement, and loyalty.",
   },
   {
+    id:3,
     Title: "Reimagine",
     img: "/images/p4.webp",
     video: "",
@@ -112,6 +115,7 @@ const expertise = [
       "Reimagine is a fully responsive, anime-inspired interactive website built to push the boundaries of front-end design and animation. The platform uses GSAP for timeline-driven animations, clipPath morphing for advanced shape transitions, and card tilt effects that make the interface more dynamic and engaging. To ensure a seamless first impression, I created a custom website loader, and I structured the code using reusable components for scalability and maintainability. Performance was a key focus, so I carefully optimized animation sequences and implemented lazy rendering to keep the experience smooth even with heavy motion. Developing Reimagine deepened my knowledge of creating immersive, animated user experiences while ensuring cross-device compatibility and fast loading speeds. It also gave me the opportunity to refine my creative problem-solving approach by balancing artistic animations with performance constraints. The impact of Reimagine is its ability to capture attention and tell stories in a way that feels alive and interactive, making it a showcase of my ability to blend technical expertise with creativity to deliver memorable, high-quality digital experiences.",
   },
   {
+    id:4,
     Title: "Times Global",
     img: "/images/m4.webp",
     video: "",
@@ -126,6 +130,7 @@ const expertise = [
       "Times Now Roman is a modern and interactive news portal designed with a clean, accessible UI/UX and powered by live API integrations using vanilla JavaScript. The platform allows users to instantly search and filter news articles, creating an engaging and responsive reading experience. To make browsing more enjoyable, I implemented smooth scrolling with Lenis and interactive animations using ScrollTrigger, synced seamlessly with the scroll behavior. The portal is fully responsive and optimized for fast data fetching, efficient rendering, and accessibility across devices. While building this project, I gained hands-on experience with API integration, managing asynchronous requests, and designing scalable front-end systems without frameworks. I also learned to fine-tune animations and layouts to keep the platform lightweight while enhancing user engagement. The impact of Times Now Roman lies in making news consumption interactive and fun, whether used for college updates, city-level portals, or larger audiences. This project demonstrates my ability to merge practical information systems with engaging design, showcasing both my technical depth and UI/UX sensibility.",
   },
   {
+    id:5,
     Title: "Nexa Bridge",
     img: "/images/pl.jpg",
     video: "",
@@ -276,7 +281,7 @@ const allProjects = [
       { img: "/images/gf.webp",},
       { img: "/images/gf.webp",}
     ],
-    stack: ['Html','Css','Js','React','tailwind','express','node','three.js','gsap','framer-motion','MongoDb'],
+    stack: ['Html','Css','JavaScript','hugging Face','git','vercel'],
     link:null,
     status: "Not active",
     github: "https://github.com/LuckyBaliyan/AI_IMAGE_GENERATOR.git",
@@ -297,7 +302,7 @@ const allProjects = [
       { img: "/images/p3 (1).webp",},
       { img: "/images/p3 (1).webp",},
     ],
-    stack: [],
+    stack: ['html','tailwind css','react','node','express','lenis','mongo db','jwt','git','stripe','cloudinary','react-toastify','vercel'],
     link: "https://luxora-frontend-rust.vercel.app/",
     status: "Live",
     github: "https://github.com/LuckyBaliyan/Brainwave_Matrix_Intern.git",
@@ -313,7 +318,7 @@ const allProjects = [
     Date:'2025',
     video: "",
     imges: [],
-    stack: [],
+    stack: ['Html','tailwind css','react','gsap','Scroll Trigger','lenis','git','vercel'],
     link: "https://anime-reimagine.vercel.app/",
     status: "Live",
     github: "https://github.com/LuckyBaliyan/AnimeReimagine.git",
@@ -329,7 +334,7 @@ const allProjects = [
     Date:'2025',
     video: "",
     imges: [],
-    stack: [],
+    stack: ['html','css','javaScript','Rest Api','gsap','scroll trigger','lenis','git','vercel'],
     link: "https://api-projects-two.vercel.app/",
     status: "Live",
     github: "https://github.com/LuckyBaliyan/API_Projects.git",
@@ -345,7 +350,8 @@ const allProjects = [
     Date:'2025',
     video: "",
     imges: [],
-    stack: [],
+    stack: ['html','tailwind css','react','framer motion','gsap','jwt','node','typeScript','express','mongo db','cloudinary','Razorpay','stripe',
+      'react toastify','git','vercel'],
     link: "https://nexa-bridge-dun.vercel.app/",
     status: "under development",
     github: "https://github.com/LuckyBaliyan/NexaBridge.git",
