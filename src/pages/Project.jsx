@@ -256,7 +256,7 @@ const Project = ({projectId}) => {
                 return (
                   <div
                     key={i}
-                    className="absolute top-0"
+                    className={`absolute top-0 ${i % 2 !== 0?'p-8 bg-gray-300':''}`}
                     style={{ left: leftPos, width: "32vw", height: "25vw" }}
                   >
                     {i % 2 === 0 ? (
@@ -317,7 +317,7 @@ const Project = ({projectId}) => {
                  </div>
               </div>
             </div>
-            <div className='bg-[var(--accent)] mt-12 px-4 lg:masker-border'>
+            <div className='bg-[var(--accent)] mt-12 px-4 masker-border'>
               {project.imges.length > 3 && (
               <div className="px-4 py-32 lg:py-24">
                 <h3 className="text-2xl md:text-5xl font-semibold mb-8 uppercase lg:text-center">More Visuals</h3>
@@ -332,7 +332,7 @@ const Project = ({projectId}) => {
                     return (
                       <div
                         key={i}
-                        className={`relative z-40 overflow-hidden  rounded-md ${randomSize}`}
+                        className={`relative z-40  overflow-hidden shadow  rounded-md ${randomSize}`}
                       >
                         <img
                           src={img.img}

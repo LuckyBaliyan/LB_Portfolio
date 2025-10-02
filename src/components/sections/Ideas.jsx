@@ -150,7 +150,7 @@ const Ideas = () => {
          <FaPlay className='text-4xl'/>
         </div>
         <img src="images/idea3.webp" alt="" className={`w-full h-full relative z-10 ${isImage?'opacity-100':'opacity-0'}` } />
-        <video src="videos/ideas2.mp4" loop muted autoPlay className='size-120 hidden lg:block lg:size-169 object-cover  inset-0  absolute top-0 lg:left-1/3 '></video>
+        <video src="videos/igc.mp4" loop muted autoPlay className='size-120 hidden lg:block lg:size-169 object-cover  inset-0  absolute top-0 lg:left-1/3 '></video>
        </div>
       </div>
       <h4 ref={rightRef} className='md:hidden translate-x-[100%]'>in Motion)</h4>
