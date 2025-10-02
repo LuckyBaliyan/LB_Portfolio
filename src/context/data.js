@@ -461,6 +461,77 @@ const allProjects = [
   }
 ];
 
-const works = [];
+const works = [
+  {
+    id:'1-0',
+    video:'/videos/Davinchi.mp4',
+    previewImg:'/images/gf.webp',
+    name:'Davinchi',
+    routes:1,
+  },
+  {
+    id:'1-1',
+    video:'/videos/luxora.mp4',
+    previewImg:'/images/p3 (1).webp',
+    name:'Luxora',
+    routes:2,
+  },
+  {
+    id:'1-2',
+    video:'',
+    previewImg:'/images/left-i.jpeg',
+    name:'Project',
+    routes:3,
+  },
+  {
+    id:'1-3',
+    video:'',
+    previewImg:'/images/left-i.jpeg',
+    name:'Project',
+    routes:4,
+  },
+  {
+    id:'2-0',
+    video:'',
+    previewImg:'/images/left-i.jpeg',
+    name:'Project',
+  },
+  {
+    id:'2-1',
+    video:'',
+    previewImg:'/images/left-i.jpeg',
+    name:'Project',
+  },
+  {
+    id:'2-2',
+    video:'',
+    previewImg:'/images/left-i.jpeg',
+    name:'Project',
+  },
+  {
+    id:'3-0',
+    video:'',
+    previewImg:'/images/left-i.jpeg',
+    name:'Project',
+  },
+  {
+    id:'3-1',
+    video:'',
+    previewImg:'/images/left-i.jpeg',
+    name:'Project',
+  },
+  {
+    id:'3-2',
+    video:'',
+    previewImg:'/images/left-i.jpeg',
+    name:'Project',
+  },
+  {
+    id:'3-3',
+    video:'',
+    previewImg:'/images/left-i.jpeg',
+    name:'Project',
+  }
+];
 
-export {greetings,data,socials,expertise,latest,stacks,allProjects};
+export {greetings,data,socials,expertise,latest,stacks,allProjects,works};
