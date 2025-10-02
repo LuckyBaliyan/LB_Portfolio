@@ -141,7 +141,7 @@ const Project = ({projectId}) => {
             "(max-width: 768px)": function () {
               gsap.to(videoRef.current, {
                 y: 200,
-                scale: 3.2,
+                scale: 2.2,
                 height: "30vh",
                 transformOrigin: "center",
                 ease: "power3.inOut",
@@ -252,7 +252,7 @@ const Project = ({projectId}) => {
             <div className='mt-6 pt-16'>  
             <div ref={videoContainerRef} className="w-full relative h-[25vw] mt-6 pt-16">
               {project.imges.slice(0,3).map((m,i) => {
-                const leftPos = (i === 2)? i*(32+2) + 'vw': i * (32 + 2) + "vw"; // width + gap in vw
+                const leftPos = (i === 2)? i*(32+2) + 'vw': i * (32 + 2) + "vw"; 
                 return (
                   <div
                     key={i}
