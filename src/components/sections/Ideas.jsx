@@ -173,7 +173,7 @@ const Ideas = () => {
 
       <div className="hidden lg:flex w-full h-screen justify-between px-16 items-center mt-32">
         {/* LEFT IMAGES */}
-        <div className="relative w-[35vw] h-[37vw] overflow-hidden"
+        <div className="relative w-[35vw] h-[37vw] overflow-hidden custom-border"
         style={{backgroundImage:`url(images/m1.webp)`,backgroundPosition:'center',
             backgroundSize:'cover',backgroundRepeat:'no-repeat'
         }}>

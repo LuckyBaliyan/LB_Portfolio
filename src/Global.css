@@ -543,3 +543,7 @@ body{
     transform: translateY(-9px) scale(1.005);
   }
 }
+
+.masker-border{
+ clip-path: polygon(0% 0%, 61% 0%, 74% 17%, 100% 17%, 100% 100%, 0% 100%);
+}

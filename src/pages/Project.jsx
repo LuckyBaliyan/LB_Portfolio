@@ -251,7 +251,7 @@ const Project = ({projectId}) => {
             </h4>
             <div className='mt-6 pt-16'>  
             <div ref={videoContainerRef} className="w-full relative h-[25vw] mt-6 pt-16">
-              {project.imges.map((m,i) => {
+              {project.imges.slice(0,3).map((m,i) => {
                 const leftPos = (i === 2)? i*(32+2) + 'vw': i * (32 + 2) + "vw"; // width + gap in vw
                 return (
                   <div
@@ -289,8 +289,8 @@ const Project = ({projectId}) => {
                </p>
             </div>
         </section>
-        <section className='mt-32 px-4'>
-            <div className='flex flex-col gap-4 lg:justify-between lg:flex-row px-4 h-[130vh] sm:h-[110vh] lg:h-[150vh]'>
+        <section className='mt-32 '>
+            <div className='flex flex-col gap-4 lg:justify-between lg:flex-row px-4'>
               <div>
                  <h4 className='text-center lg:text-start'>Stack Used</h4>
                   <div className='flex flex-wrap mt-4 items-center w-full justify-center lg:justify-start lg:w-[50%] gap-2'>
@@ -308,7 +308,7 @@ const Project = ({projectId}) => {
                   </div>
               </div>
               <div className='flex items-center mt-16 md:mt-24 lg:mt-0 flex-col md:gap-4'>
-                <FlipCard frontImage={project.img} backImage={nextProject.img} />
+                <FlipCard frontImage={project.img} backImage={nextProject.img}/>
                  <div  onClick={()=>handleNextProject()}  className='flex gap-2 cursor-pointer'>
                   <h5 ref={counterRef}  className='font-[Neue] !xs:text-base sm:text-2xl  md:text-3xl project-no uppercase font-semibold'>Project-{String(project.id).padStart(2,"0")}</h5>
                   {projectId !== project.id &&
@@ -317,6 +317,35 @@ const Project = ({projectId}) => {
                  </div>
               </div>
             </div>
+            <div className='bg-[var(--accent)] mt-12 px-4 masker-border'>
+              {project.imges.length > 3 && (
+              <div className="px-4 py-32 lg:py-24">
+                <h3 className="text-2xl md:text-5xl font-semibold mb-8 uppercase lg:text-center">More Visuals</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 auto-rows-[150px] md:auto-rows-[200px]">
+                  {project.imges.map((img, i) => {
+                    const randomSize = [
+                      'row-span-1 col-span-1',
+                      'row-span-2 col-span-1',
+                      'row-span-1 col-span-2'
+                    ][i];
+            
+                    return (
+                      <div
+                        key={i}
+                        className={`relative z-40 overflow-hidden  rounded-md ${randomSize}`}
+                      >
+                        <img
+                          src={img.img}
+                          alt={`project-img-${i}`}
+                          className="w-full h-full z-30 object-cover hover:scale-105 transition-all duration-500"
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+          </div>
         </section>
         <footer>
             <Footer/>

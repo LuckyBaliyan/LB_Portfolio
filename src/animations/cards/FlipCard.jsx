@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const FlipCard = ({ frontImage, backImage }) => {
+const FlipCard = ({ frontImage, backImage}) => {
   const cardRef = useRef(null);
 
   // Always refresh ScrollTrigger on load
@@ -22,33 +22,16 @@ const FlipCard = ({ frontImage, backImage }) => {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.set(cardRef.current, { transformStyle: "preserve-3d" });
-
-      if (window.innerWidth >= 1023) {
-        gsap.to(cardRef.current, {
-          rotateY: 180,
-          x: -500,
-          y: 500,
-          scale: 1.5,
-          ease: "power3.inOut",
-          scrollTrigger: {
-            trigger: cardRef.current,
-            start: "top 40%",
-            end: "bottom+=100 top",
-            scrub: 2,
-          }
-        });
-      } else {
         gsap.to(cardRef.current, {
           rotateY: 180,
           ease: "power3.inOut",
           scrollTrigger: {
             trigger: cardRef.current,
-            start: "top bottom",
+            start: "top 80%",
             end: "bottom top",
             scrub: 2,
           }
         });
-      }
     });
 
     return () => ctx.revert();
