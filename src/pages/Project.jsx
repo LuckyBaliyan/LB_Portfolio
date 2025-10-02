@@ -225,7 +225,7 @@ const Project = ({projectId}) => {
         </div>
         <section className='py-6'>
             <div className='px-4 py-2 flex flex-col items-center justify-center md:items-start md:justify-center gap-6 min-h-[50vh]'>
-                <h2 ref={headingRef} className='mask p-4'><SplitText text={project.Title} /></h2>
+                <h2 ref={headingRef} className='mask p-4 whitespace-nowrap'><SplitText text={project.Title} /></h2>
                 <p ref={paraRef} className='text-xl text-center md:text-start md:pl-6 leading-tight mask'>
                     <SplitLine text='I am Passionate about 
                     crafting Memorable Experiences.' className='opacity-0' />
