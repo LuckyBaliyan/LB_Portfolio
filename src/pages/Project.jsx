@@ -141,7 +141,7 @@ const Project = ({projectId}) => {
             "(max-width: 768px)": function () {
               gsap.to(videoRef.current, {
                 y: 200,
-                scale:1,
+                scale:2.5,
                 height: "30vh",
                 transformOrigin: "center",
                 ease: "power3.inOut",
