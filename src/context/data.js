@@ -461,4 +461,6 @@ const allProjects = [
   }
 ];
 
+const works = [];
+
 export {greetings,data,socials,expertise,latest,stacks,allProjects};
