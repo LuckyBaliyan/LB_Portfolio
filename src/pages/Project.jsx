@@ -141,7 +141,7 @@ const Project = ({projectId}) => {
             "(max-width: 768px)": function () {
               gsap.to(videoRef.current, {
                 y: 200,
-                scale: 2.2,
+                scale:1,
                 height: "30vh",
                 transformOrigin: "center",
                 ease: "power3.inOut",
@@ -317,7 +317,7 @@ const Project = ({projectId}) => {
                  </div>
               </div>
             </div>
-            <div className='bg-[var(--accent)] mt-12 px-4 masker-border'>
+            <div className='bg-[var(--accent)] mt-12 px-4 lg:masker-border'>
               {project.imges.length > 3 && (
               <div className="px-4 py-32 lg:py-24">
                 <h3 className="text-2xl md:text-5xl font-semibold mb-8 uppercase lg:text-center">More Visuals</h3>
