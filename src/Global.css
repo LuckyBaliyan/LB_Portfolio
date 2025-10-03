@@ -186,6 +186,10 @@ body{
   .elem{
     @apply w-full flex gap-2 items-center justify-center;
   }
+
+  .media-card{
+    @apply text-3xl cursor-pointer;
+  }
 }
 
 .anim {
@@ -549,6 +553,7 @@ body{
  clip-path: polygon(0% 0%, 63% 0%, 71% 8%, 100% 8%, 100% 100%, 0 100%);
 }
 
+
 /* Works gallery Styles */
 
 .container{
@@ -704,6 +709,7 @@ body{
     display: none;
   }
 }
+
 
 
 

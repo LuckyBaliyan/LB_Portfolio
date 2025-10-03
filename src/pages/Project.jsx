@@ -317,10 +317,10 @@ const Project = ({projectId}) => {
                  </div>
               </div>
             </div>
-            <div className='bg-[var(--accent)] mt-12 px-4 masker-border'>
+            <div className='bg-[#121212] mt-12 px-4 masker-border'>
               {project.imges.length > 3 && (
               <div className="px-4 py-32 lg:py-24">
-                <h3 className="text-2xl md:text-5xl font-semibold mb-8 uppercase lg:text-center">More Visuals</h3>
+                <h3 className="text-2xl md:text-5xl font-semibold mb-8 uppercase text-[var(--textWhite)] lg:text-center">More Visuals</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 auto-rows-[150px] md:auto-rows-[200px]">
                   {project.imges.map((img, i) => {
                     const randomSize = [
