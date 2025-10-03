@@ -658,6 +658,53 @@ body{
 }
 
 
+@media (max-width:1023px){
+  .gallery{
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    top:0;
+    left:0;
+    transform: translate(0, 0);
+    padding: 0em;
+  }
+  .item{
+    width:22vh;
+    height:16vh;
+  }
+
+  .item:nth-child(even){
+    transform: scale(0.7);
+  }
+
+  .item:nth-child(odd){
+    transform: scale(0.55);
+  }
+
+  .row{
+    width:100vw;
+    height: 50vh;
+    align-items: center;
+    padding: 1em;
+  }
+
+  .row .item:nth-child(even){
+    align-self: flex-end;
+  }
+
+  .row .item:nth-child(odd){
+    align-self: flex-start;
+  }
+}
+
+@media (max-width:680px) {
+  #videoName{
+    font-size: 18px;
+    font-weight: bolder;
+    display: none;
+  }
+}
+
 
 
 

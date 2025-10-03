@@ -61,11 +61,32 @@ const Works = () => {
   };
 
   const container = document.querySelector('.container');
-  container.addEventListener('mousemove',handleMouseMove);
+  
+  const addMouseMoveListener = () => {
+    if (window.innerWidth > 768 && container) {
+      container.addEventListener('mousemove', handleMouseMove);
+    }
+  };
 
-  return()=>{
-    container.removeEventListener("mousemove",handleMouseMove);
-  }
+  const removeMouseMoveListener = () => {
+    if (container) {
+      container.removeEventListener('mousemove', handleMouseMove);
+    }
+  };
+
+  const handleResize = () => {
+    removeMouseMoveListener();
+    addMouseMoveListener();
+  };
+
+
+  addMouseMoveListener();
+  window.addEventListener('resize', handleResize);
+
+  return () => {
+    removeMouseMoveListener();
+    window.removeEventListener('resize', handleResize);
+  };
 
  },[])
 
