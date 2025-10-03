@@ -534,4 +534,13 @@ const works = [
   }
 ];
 
-export {greetings,data,socials,expertise,latest,stacks,allProjects,works};
+const MyImages = [
+  '/images/myImg.webp',
+  '/images/my2.jpg',
+  '/images/my1.jpg',
+  '/images/myImg.webp',
+  '/images/my2.jpg',
+  '/images/my1.jpg',
+]
+
+export {greetings,data,socials,expertise,latest,stacks,allProjects,works,MyImages};
