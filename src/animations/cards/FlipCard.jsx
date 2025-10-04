@@ -27,7 +27,7 @@ const FlipCard = ({ frontImage, backImage}) => {
           ease: "power3.inOut",
           scrollTrigger: {
             trigger: cardRef.current,
-            start: "top 80%",
+            start: "top 100%",
             end: "bottom top",
             scrub: 2,
           }

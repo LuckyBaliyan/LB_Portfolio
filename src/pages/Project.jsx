@@ -256,15 +256,15 @@ const Project = ({projectId}) => {
                 return (
                   <div
                     key={i}
-                    className={`absolute top-0 ${i % 2 !== 0?'p-8 bg-gray-300':''}`}
-                    style={{ left: leftPos, width: "32vw", height: "25vw" }}
+                    className={`absolute top-0 ${i % 2 !== 0?'p-8 lg:bg-gray-300':''} w-[27vh] h-[25vh] lg:w-[32vw] lg:h-[25vw]`}
+                    style={{ left: leftPos, }}
                   >
                     {i % 2 === 0 ? (
                       <img
                         ref={(el) => (imageRefs.current[i] = el)}
                         src={m.img}
                         alt=""
-                        className="w-full h-full object-cover z-[10]"
+                        className="w-full h-full hidden md:block object-cover z-[10]"
                       />
                     ) : (
                       <video
@@ -273,7 +273,7 @@ const Project = ({projectId}) => {
                         loop
                         muted
                         autoPlay
-                        className="w-full h-full object-cover !z-[999]"
+                        className="w-full h-full -translate-x-[20%] md:translate-x-0 object-cover !z-[999]"
                       ></video>
                     )}
                   </div>

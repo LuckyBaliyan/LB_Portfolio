@@ -202,6 +202,9 @@ const About = () => {
                 I’m always learning, experimenting, and pushing myself to become a better developer every day. Whether it's code, design, or animation — if it's creative and challenging, I'm all in.
             </p>
           </div>
+          <div className='lg:w-[75%] py-4'>
+            <MainBtn text={'Get My Resume'} custome='bg-[var(--accent)]' />
+          </div>
         </div>
         </div>
         <div className='bg-[#121212]'>
