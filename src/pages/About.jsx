@@ -29,6 +29,7 @@ const About = () => {
     const isMobile = window.innerWidth < 768;
     const isTabletOrMobile = window.innerWidth < 1024;
 
+
     mainTimeline.to(paramsRef.current,{
       y:0,
       ease:'power3.inOut',
@@ -203,7 +204,7 @@ const About = () => {
             </p>
           </div>
           <div className='lg:w-[75%] py-4'>
-            <MainBtn text={'Get My Resume'} custome='bg-[var(--accent)]' />
+            <MainBtn text={'Get My Resume'} custome='bg-[var(--accent)]' forResume={true} />
           </div>
         </div>
         </div>

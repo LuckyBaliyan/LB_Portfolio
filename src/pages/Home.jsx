@@ -120,7 +120,7 @@ const Home = () => {
             <SplitLine text='I’m a Frontend Developer and UI Enthusiast who loves 
             crafting modern animated and user-friendly web experiences.' />
           </p>
-          <div className='fade-in ml-2 md:ml-0'><MainBtn text={'See Works'} /></div>
+          <div className='fade-in ml-2 md:ml-0'><MainBtn text={'See Works'} link='/works' /></div>
         </div>
         <div className='w-fit md:w-full absolute bottom-12 -right-0 sm:bottom-[20%] sm:right-4  md:bottom-0 md:left-0 flex 
           flex-col md:flex-row justify-between md:pb-8 px-4'>
