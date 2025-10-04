@@ -62,7 +62,7 @@ const Home = () => {
 
   Reavel(headingRef,{delay:1.5,stagger:0.06,});
   Reavel(nameRef,{delay:1.5,stagger:0.06,});
-  Reavel(imgRef,{delay:1.65});
+  Reavel(imgRef,{delay:2});
   Reavel(lineRef,{delay:1.5,stagger:0.1});
   Reavel(CopyRef,{delay:1.5,stagger:0.06,});
   Reavel(SinceRef,{delay:1.5,stagger:0.06,});
@@ -104,8 +104,8 @@ const Home = () => {
         </div>
         <div className="my-img scale-100 md:scale-70">
            <CardTilt  className='w-[20vh] h-[23vh] lg:w-[25vw] lg:h-[32vw] md:w-[30vw] md:h-[36vw]'>
-            <div ref={imgRef} className="img-wrapper relative scale-0 overflow-hidden rounded-[6px]  w-full h-full">
-            <img src="images/myImg.webp" alt="" className='last scale-110 grayscale-100'/>
+            <div ref={imgRef} className="img-wrapper relative scale-100 img-clip overflow-hidden rounded-[6px]  w-full h-full">
+            <img src="images/intro.png" alt="" className='last scale-110 object-top grayscale-0'/>
             </div>
             </CardTilt>
             <div className="w-full mask py-2">

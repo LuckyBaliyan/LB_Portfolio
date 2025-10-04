@@ -164,10 +164,10 @@ const About = () => {
       </section>
       <section>
         <div className='bg-[#121212] rounded-t-4xl w-full min-h-screen px-4 py-16'>
-           <div className='p-4 flex justify-between'>
+           <div className='p-4 flex flex-col items-center gap-4 md:flex-row justify-between'>
               <TextUP text={'About'} secText={'Lucky'} color={'--textWhite'}/>
-              <div className=' flex self-end justify-center   items-center'>
-              <p className='uppercase text-[var(--textWhite)] cursor-pointer'>Get My REsume</p>
+              <div className=' flex md:self-end justify-center   items-center'>
+              <p className='uppercase text-[var(--textWhite)] cursor-pointer'>Available to work</p>
              </div>
            </div>
            <div className='px-4'><hr className='text-[var(--textWhite)] font-light' /></div>
@@ -205,11 +205,10 @@ const About = () => {
         </div>
         </div>
         <div className='bg-[#121212]'>
-          <div className='p-4 flex justify-between px-4'>
+          <div className='p-4 flex flex-col md:flex-row gap-4 items-center justify-between px-4'>
               <TextUP text={'My'} secText={'Socials'} color={'--textWhite'}/>
-              <div className='self-end'>
-                <p className='text-[var(--textWhite)]'>Find Me on Social Media</p>
-                <p className='text-[var(--textWhite)]'>I post regularly with my works </p>
+              <div className='md:self-end'>
+                <p className='text-[var(--textWhite)] uppercase'>Find Me on Social Media</p>
               </div>
           </div>
           <div className='px-4'><hr className='text-[var(--textWhite)]'/></div>
@@ -242,11 +241,11 @@ const About = () => {
             <div className='flex items-center justify-center mt-6 '>
                 <h3 className='uppercase text-3xl tracking-normal'>More about my soul</h3>
             </div>
-            <div className='flex flex-wrap w-[65%] justify-between gap-4 mt-24 px-4'>
+            <div className='flex flex-wrap w-[80%] items-center md:items-start md:w-[65%] justify-between gap-4 mt-24 px-4'>
               {[
                 {
                   title: "Activities",
-                  items: ["Communication", "Hackathons", "Leaderships",'Team Player', "Freelance", "Digital Creator"],
+                  items: ["Communication", "Hackathons", "Leaderships",'Team Player', "Digital Creator"],
                 },
                 {
                   title: "Languages",
@@ -254,21 +253,21 @@ const About = () => {
                 },
                 {
                   title:'My Tools',
-                  items:['Copiolet','Stich','Cursor','Lovable','Grock','ChatGpt','Gemini','MUI','Universe.io'],
+                  items:['Copiolet','Cursor','Lovable','Grock','ChatGpt','Gemini','MUI','Unicorn.stdo'],
                 },
                 {
                   title: "Hobbies",
-                  items: ["Web Designing", "E-gaming", "Volleyball", "Movies", "Music"],
+                  items: ["Web Designing", "Gaming", "Volleyball", "Movies", "Music"],
                 },
                 {
-                  title: "Fav Artists",
+                  title: "Music Taste",
                   items: [
                     "Sidhu Moosewala",
-                    "Diljit Dosanjh",
                     "Honey Singh",
-                    "The Weeknd",
+                    "The Weekend",
+                    "21 Savage",
                     "Travis Scott",
-                    "Babu Maan",
+                    "Babbu Maan",
                     "Masoom Sharma",
                   ],
                 },
@@ -281,8 +280,9 @@ const About = () => {
                 </div>
               ))}
             </div>
-            <div className='size-64 absolute right-6 bottom-[15%] overflow-hidden'>
-              <img src="/images/social_3.jpg" alt="" />
+            <div className='size-64 hidden md:block absolute right-6 bottom-[15%] overflow-hidden'>
+              <img src="/images/soul.jpeg" alt="" className='absolute top-0 left-0 w-full h-full' />
+              <video className='absolute top-0 left-0 w-full h-full object-cover' src="/videos/soul.mp4" muted loop autoPlay></video>
             </div>
         </div>
       </section>

@@ -31,7 +31,7 @@ const Reavel = (ref,options={}) => {
     const img = ref.current;
     if(img){
       gsap.to(img,{
-      scale:1,
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
       duration: options.imgDuration || 1,
       transformOrigin:options.origin || 'bottom',
       ease: options.imgEase || 'power2.out',

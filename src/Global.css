@@ -192,6 +192,10 @@ body{
   }
 }
 
+.img-clip{
+  clip-path:polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
 .anim {
   animation: rotate 32s linear infinite;
   animation-delay: 1.2s;

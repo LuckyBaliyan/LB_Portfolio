@@ -538,8 +538,12 @@ const MyImages = [
   '/images/myImg.webp',
   '/images/my2.jpg',
   '/images/my1.jpg',
+  '/images/my3.png',
+  '/images/intro.png',
   '/images/myImg.webp',
   '/images/my2.jpg',
+  '/images/my3.png',
+  '/images/intro.png',
   '/images/my1.jpg',
 ]
 
