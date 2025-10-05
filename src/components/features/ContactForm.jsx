@@ -86,7 +86,7 @@ const ContactForm = () => {
         autoComplete='off'
         spellCheck='false'
         />
-        <button ref={btnRef} type='submit' className='contact-btn'>
+        <button disabled={status !== 'Send'} ref={btnRef} type='submit' className={`contact-btn ${status !== 'Send'?'!cursor-progress':"!cursor-pointer"}`}>
             {status}
         </button>
     </form>

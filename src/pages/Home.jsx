@@ -92,7 +92,7 @@ const Home = () => {
       <section className='relative'>
         <div ref={headingRef} className='flex-col translate-y-[100%] !z-40 md:translate-y-0 mt-24 md:mt-6  ml-4 w-[85%] pointer-events-none flex'>
           <div className='mask relative -ml-2 md:ml-0 z-40 mt-2'>
-            <h1 className='w-full p-0 md:p-2  whitespace-normal md:whitespace-nowrap'>
+            <h1 className='w-full  md:p-2 px-1.5  whitespace-normal md:whitespace-nowrap'>
               <SplitText text='Creative web' /> 
             </h1>
           </div>
@@ -102,7 +102,7 @@ const Home = () => {
             </h2>
           </div>
         </div>
-        <div className="my-img scale-100 md:scale-70">
+        <div className="my-img mt-2 md:mt-0 scale-100 md:scale-70">
            <CardTilt  className='w-[20vh] h-[23vh] lg:w-[25vw] lg:h-[32vw] md:w-[30vw] md:h-[36vw]'>
             <div ref={imgRef} className="img-wrapper relative scale-100 img-clip overflow-hidden rounded-[6px]  w-full h-full">
             <img src="images/intro.png" alt="" className='last scale-110 object-top grayscale-0'/>
@@ -116,11 +116,14 @@ const Home = () => {
             </div>
         </div>
         <div className="my-para overflow-hidden absolute top-[30%] left-0 md:absolute md:top-[55%] md:left-[60%] flex flex-col gap-2">
-          <p ref={lineRef} className='leading-[1] md:leading-[1.08] w-2/3 md:w-[90%] px-2 text-sm lg:text-[16px] overflow-hidden'>
+          <p ref={lineRef} className='leading-[1] md:leading-[1.08] w-2/3 md:w-[90%] px-4 text-sm lg:text-[16px] overflow-hidden'>
             <SplitLine text='I’m a Frontend Developer and UI Enthusiast who loves 
             crafting modern animated and user-friendly web experiences.' />
           </p>
-          <div className='fade-in ml-2 md:ml-0'><MainBtn text={'See Works'} link='/works' /></div>
+          <div className='fade-in flex flex-col gap-2 md:flex-row md:gap-4 ml-2 md:ml-0'>
+            <MainBtn text={'See Works'} link='/works' />
+            <MainBtn text={'Resume'} custome='!bg-[var(--accent)] !text-[#fff]' forResume={true} />
+          </div>
         </div>
         <div className='w-fit md:w-full absolute bottom-12 -right-0 sm:bottom-[20%] sm:right-4  md:bottom-0 md:left-0 flex 
           flex-col md:flex-row justify-between md:pb-8 px-4'>

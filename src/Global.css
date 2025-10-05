@@ -127,6 +127,10 @@ body{
     form{
       @apply flex flex-col justify-between space-y-6  font-[Neue];
     }
+
+    a{
+      @apply font-[Neue];
+    }
 }
 
 
@@ -313,16 +317,16 @@ body{
   gap:1vw;
 }
 
-.footer p{
+.footer a{
     transition: all 0.1s ease;
     padding:0.3em 1em;
     border-radius: 24px;
     cursor: pointer;
-    color:#fff;
 }
 
-.footer p:hover{
+.footer a:hover{
     background-color: #292929;
+    color:#fff;
 }
 
 .svg{
@@ -331,7 +335,6 @@ body{
   left: -169px;
   width: 300px;
   height: 100%;
-  /*fill: #21211e;*/
   fill:#181717;
   stroke: none;
 }

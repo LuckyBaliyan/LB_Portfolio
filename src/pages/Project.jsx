@@ -348,7 +348,7 @@ const Project = ({projectId}) => {
           </div>
         </section>
         <footer>
-            <Footer/>
+            <Footer border={false}/>
         </footer>
       </>
     )

@@ -111,6 +111,12 @@ const About = () => {
 
   },[])
 
+  const handleNavigate = (link)=>{
+    if(link){
+      window.open(link,'_blank');
+    }
+  }
+
 
 
   return (
@@ -223,7 +229,7 @@ const About = () => {
           <div className='px-4 text-[var(--textWhite)] mt-6'>
             <p>Over a Past few Months i have been working</p>
             <p>On immersive new and AI trendy web experiences every time i decode any new </p>
-            <p>Web asthetic i put it on my social media follow me if u want several such micro and mini interactions.</p>
+            <p>Web asthetic i put it on my social media follow me if u want several such micro-interactions.</p>
           </div>
           <div className='w-full h-[80vh] relative mt-6'>
             <video loop muted autoPlay src="/videos/social.mp4" className='w-full absolute top-0 left-0 z-20 h-full object-cover'></video>
@@ -235,15 +241,15 @@ const About = () => {
         <div className='min-h-screen relative w-full py-6 px-4'>
             <div className='flex items-center justify-center'><h2>Find Me On</h2></div>
             <div className='flex items-center justify-center w-full flex-wrap gap-12  p-6 mt-6'>
-              <FaSquareInstagram className='media-card' />
-              <FaSquareGithub className='media-card' />
-              <FaLinkedin className='media-card'/>
-              <RiTwitterXLine className='media-card'/>
-              <FaFacebookSquare className='media-card'/>
-              <IoLogoYoutube className='media-card' />
+              <FaSquareInstagram onClick={()=>handleNavigate('https://www.instagram.com/luckybaliyan3507/')} className='media-card' />
+              <FaSquareGithub onClick={()=>handleNavigate("https://github.com/LuckyBaliyan")} className='media-card' /> 
+              <FaLinkedin onClick={()=>handleNavigate('https://www.linkedin.com/in/lucky-baliyan-67b487299/')} className='media-card'/>
+              <RiTwitterXLine onClick={()=>handleNavigate()} className='media-card'/>
+              <FaFacebookSquare onClick={()=>handleNavigate('https://www.facebook.com/luckybaliyan7196')} className='media-card'/>
+              <IoLogoYoutube onClick={()=>handleNavigate('https://www.youtube.com/@j__o__k__e__r')} className='media-card' />
             </div>
-            <div className='flex items-center justify-center mt-6 '>
-                <h3 className='uppercase text-3xl tracking-normal'>More about my soul</h3>
+            <div className='flex items-center justify-center mt-6 w-full'>
+                <h3 className='uppercase text-3xl  tracking-normal'>More about my soul</h3>
             </div>
             <div className='flex flex-wrap w-[80%] items-center md:items-start md:w-[65%] justify-between gap-4 mt-24 px-4'>
               {[

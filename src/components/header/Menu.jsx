@@ -118,10 +118,10 @@ const Menu = () => {
         </div>
         <div className='footer'>
             {
-                socials.map((s,indx)=>(
-                    <p key={indx} className='md:text-md'>
-                        {s}
-                    </p>
+                socials.slice(0,3).map((s,indx)=>(
+                    <a href={s.link} target='_blank' key={indx} className='md:text-md text-[var(--textWhite)]'>
+                        {s.name}
+                    </a>
                 ))
             }
         </div>

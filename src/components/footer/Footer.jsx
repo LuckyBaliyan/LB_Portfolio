@@ -1,14 +1,13 @@
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
 import gsap from 'gsap';
-import React,{useRef} from 'react';
+import {useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Navigate } from 'react-router-dom';
-import { data } from '../../context/data';
+import { data, socials } from '../../context/data';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Footer = () => {
+const Footer = ({border=true}) => {
   const revealRef = useRef(null);
   const imagesRef = useRef([]);
 
@@ -58,7 +57,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className='w-full h-full text-5xl bg-[#121212]'>
+    <div className={`w-full h-full ${border?'rounded-t-4xl':'rounded-none'} text-5xl bg-[#121212]`}>
       <div className='w-full h-[80vh] lg:min-h-screen flex items-center justify-center'>
         <div className='flex flex-col items-center gap-4 mask py-4'>
           <h1
@@ -109,9 +108,16 @@ const Footer = () => {
                 <p className='text-[var(--textWhite)] text-base'>+91 9759940199</p>
               </div>
               <div className='mt-6'>
-                <p className='text-[var(--textWhite)] text-sm'>Galgotias University,Gautam buddh Nagar</p>
-                <p className='text-[var(--textWhite)] text-sm'>Greater Noida, Uttar Pradesh</p>
+                <p className='text-[var(--textWhite)] text-sm'>Galgotias University</p>
+                <p className='text-[var(--textWhite)] text-sm'>Greater Noida,&nbsp; Uttar Pradesh</p>
                 <p className='text-[var(--textWhite)] text-sm'>India</p>
+              </div>
+              <div className='flex flex-wrap mt-6 gap-2'>
+                {socials.map((s,i)=>(
+                  <a key={i} href={s.link} target='_blank' className='text-[var(--textWhite)]  text-sm underline px-1 cursor-pointer'>
+                    {s.name}
+                  </a>
+                ))}
               </div>
             </div>
             </div>

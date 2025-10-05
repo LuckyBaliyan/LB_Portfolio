@@ -31,7 +31,22 @@ const greetings = [
 ]
 
 const socials = [
-  'Github','Instagramm','Linkdin','Youtube'
+  {
+    name:'Github',
+    link:"https://github.com/LuckyBaliyan"
+  },
+  {
+    name:'Linkdin',
+    link:'https://www.linkedin.com/in/lucky-baliyan-67b487299/'
+  },
+  {
+    name:"Instagram",
+    link:'https://www.instagram.com/luckybaliyan3507/',
+  },
+  {
+    name:'Youtube',
+    link:'https://www.youtube.com/@j__o__k__e__r'
+  },
 ]
 
 const expertise = [
@@ -538,12 +553,8 @@ const MyImages = [
   '/images/myImg.webp',
   '/images/my2.jpg',
   '/images/my1.jpg',
-  '/images/my3.png',
-  '/images/intro.png',
   '/images/myImg.webp',
   '/images/my2.jpg',
-  '/images/my3.png',
-  '/images/intro.png',
   '/images/my1.jpg',
 ]
 
