@@ -411,21 +411,28 @@ const allProjects = [
     Date:'2025'
   },
   {
-    id:7,
-    Title: "Luxora",
-    img: "/images/p3 (1).webp",
-    Date:'2025',
-    video: "",
-    imges: [],
-    stack: [],
-    link: "https://luxora-frontend-rust.vercel.app/",
-    status: "Live",
-    github: "https://github.com/LuckyBaliyan/Brainwave_Matrix_Intern.git",
-    para:
-      "A luxury-focused MERN stack e-commerce platform designed for premium clothing brands.",
-    content:
-      "Luxora is a full-stack MERN e-commerce application crafted for premium clothing brands, developed with the goal of delivering a high-end, luxury shopping experience to customers. The platform features advanced payment integration through Razorpay, support for cash-on-delivery, and real-time order tracking, giving users full transparency throughout their shopping journey. To elevate the user experience, I implemented Lenis for smooth scrolling and designed a clean, modern interface that emphasizes the exclusivity of the brand’s products. The system is fully responsive, optimized with lazy loading, API call optimization, and MongoDB indexing to handle performance at scale. Building Luxora allowed me to gain practical experience in developing secure transactions, building scalable architectures, and creating reliable order management systems. I also learned to refine the UI/UX flow so that every detail, from product discovery to checkout, feels seamless and intuitive. The impact of Luxora lies in how it combines business-ready features with polished design, showcasing my ability to deliver end-to-end solutions that not only work technically but also resonate with customers by driving trust, engagement, and loyalty.",
-  },
+  id: 7,
+  Title: "OCHI_DESIGN",
+  img: "/images/ochi2.png",
+  video: "/videos/ochi.mp4",
+  imges:[{ img: '/images/ochi3.png' },
+  { img: '/images/ochi4.png' },
+  { img: '/images/ochi6.png' },
+  { img: '/images/ochi5.png' },
+  {
+    img:'/images/ochi1.png'
+  }
+  ],
+  stack: ["React", "Framer Motion", "Locomotive Scroll", "TailwindCSS", "Git", "Vercel", "HTML"],
+  link: 'https://ochi-design-agency-one.vercel.app/',
+  status: "Active",
+  github: "https://github.com/LuckyBaliyan/ochiDesignAgency.git",
+  para:
+    "A modern design agency landing page built with smooth animations and prallax",
+  content:
+    "Ochi.design is a creative and interactive design agency landing page that blends performance with stunning motion design. The project showcases the power of Framer Motion for fluid animations and Locomotive Scroll for smooth, parallax-based scrolling experiences. I learned how to configure Locomotive Scroll effectively to achieve synchronized parallax effects and fine-tuned scroll-based animations for different sections. The layout was crafted with TailwindCSS for clean, responsive styling, ensuring the design adapts beautifully across devices. Through this project, I strengthened my ability to build visually engaging and high-performing websites that provide a premium user experience. Hosting was done on Vercel for fast deployment, and the codebase was maintained via Git for version control. Visionary represents my expertise in integrating animation frameworks with React to create experiences that feel both modern and cinematic.",
+  Date: "2025"
+ },
   {
     id:8,
     Title: "Reimagine",
