@@ -433,21 +433,21 @@ const allProjects = [
     "Ochi.design is a creative and interactive design agency landing page that blends performance with stunning motion design. The project showcases the power of Framer Motion for fluid animations and Locomotive Scroll for smooth, parallax-based scrolling experiences. I learned how to configure Locomotive Scroll effectively to achieve synchronized parallax effects and fine-tuned scroll-based animations for different sections. The layout was crafted with TailwindCSS for clean, responsive styling, ensuring the design adapts beautifully across devices. Through this project, I strengthened my ability to build visually engaging and high-performing websites that provide a premium user experience. Hosting was done on Vercel for fast deployment, and the codebase was maintained via Git for version control. Visionary represents my expertise in integrating animation frameworks with React to create experiences that feel both modern and cinematic.",
   Date: "2025"
  },
-  {
-    id:8,
-    Title: "Reimagine",
-    img: "/images/p4.webp",
-    Date:'2025',
-    video: "",
-    imges: [],
-    stack: [],
-    link: "https://anime-reimagine.vercel.app/",
-    status: "Live",
-    github: "https://github.com/LuckyBaliyan/AnimeReimagine.git",
-    para:
-      "An anime-inspired animated website with immersive GSAP-driven transitions.",
-    content:
-      "Reimagine is a fully responsive, anime-inspired interactive website built to push the boundaries of front-end design and animation. The platform uses GSAP for timeline-driven animations, clipPath morphing for advanced shape transitions, and card tilt effects that make the interface more dynamic and engaging. To ensure a seamless first impression, I created a custom website loader, and I structured the code using reusable components for scalability and maintainability. Performance was a key focus, so I carefully optimized animation sequences and implemented lazy rendering to keep the experience smooth even with heavy motion. Developing Reimagine deepened my knowledge of creating immersive, animated user experiences while ensuring cross-device compatibility and fast loading speeds. It also gave me the opportunity to refine my creative problem-solving approach by balancing artistic animations with performance constraints. The impact of Reimagine is its ability to capture attention and tell stories in a way that feels alive and interactive, making it a showcase of my ability to blend technical expertise with creativity to deliver memorable, high-quality digital experiences.",
+ {
+  id: 8,
+  Title: "CineScope",
+  img: "/images/movies.jpg",
+  video: "/videos/movies.mp4",
+  imges: [{img:'/images/movies1.png'},{img:'/images/movies2.png'},{img:'/images/movies3.png'},{img:'/images/movies4.png'}],
+  stack: ["React", "Appwrite", "TailwindCSS", "HTML", "REST API"],
+  link: null,
+  status: "Active",
+  github: "https://github.com/LuckyBaliyan/react-movie-app.git",
+  para:
+    "A dynamic movie discovery platform powered by Appwrite and REST APIs.",
+  content:
+    "CineScope is a React-based movie page that connects to Appwrite services for backend functionality and leverages REST APIs to fetch real-time movie data. Through this project, I learned how to implement Appwrite in the frontend, manage API requests efficiently, and integrate complex data flows seamlessly. I implemented a debouncing mechanism to minimize redundant API calls, significantly improving performance and reducing network load. The application includes a responsive search feature and a trending movies section that updates dynamically based on user searches, offering a personalized experience. The interface was built with TailwindCSS for sleek and adaptive styling, ensuring both usability and speed. This project strengthened my understanding of API integration, state management, and frontend-backend connectivity while deepening my experience with real-world API optimization techniques.",
+  Date: "2025"
   },
   {
     id:9,
