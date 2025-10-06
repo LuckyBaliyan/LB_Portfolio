@@ -96,7 +96,8 @@ const Works = () => {
       <div className="fixed top-4 right-4 opacity-100 pointer-events-auto z-[800]">
        <Menu />
       </div>
-      <div className="container">
+      <div className='!bg-[#080807]'>
+         <div className="container">
          <div className="gallery" ref={galleryRef}>
             {items.map((row,rowIndex)=>(
               <div key={`row-${rowIndex}`} className="row">
@@ -121,6 +122,7 @@ const Works = () => {
             ))}
          </div>
       </div> 
+      </div>
     </>
   )
 }
