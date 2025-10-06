@@ -122,7 +122,7 @@ const LatestProjects = () => {
       <div>
         {allProjects.slice(0,5).map((item, index) => (
           <div key={index} className='banner'>
-            <h1 className={`split italic px-8 py-2 ${index === (latest.length - 1)?'!text-[#121212]':''}`}>
+            <h1 className={`split italic px-8 py-2`}>
               {item.Title.split('').map((char, i) => (
                 <span className='down' key={i}>{char}</span>
               ))}

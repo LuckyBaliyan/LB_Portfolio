@@ -377,7 +377,7 @@ const allProjects = [
   {
     id:5,
     Title: "Nexa Bridge",
-    img: "/images/pl.jpg",
+    img: "/images/nexa.jpg",
     Date:'2025',
     video: "/videos/Nexa.mp4",
     imges: [{img:'/images/nexa_2.png'},{img:'/images/nexa_3.png'},{img:'/images/nexa_7.png'},
@@ -394,24 +394,8 @@ const allProjects = [
     content:
       "Nexa Bridge is a feature-rich alumni-student connectivity platform designed to foster meaningful relationships, mentorship, and career opportunities within educational communities. It includes separate dashboards for students, alumni, and administrators, each equipped with tailored functionalities such as mentorship programs, community postings, job and internship boards, donations, chats, and even video calls for real-time interactions. The platform is built to be fully responsive and scalable, capable of handling multiple roles and large user bases without sacrificing performance. In developing Nexa Bridge, I focused on implementing role-based access control, integrating real-time communication tools, and ensuring data security across different modules. I also optimized the system for scalability, enabling smooth communication and interaction even with high traffic. This project significantly improved my ability to design and manage complex full-stack architectures while working on socially impactful features that can bring real-world value. The impact of Nexa Bridge lies in enabling students to seek guidance, alumni to give back, and institutions to maintain strong networks, demonstrating my capability to build systems that combine technical strength with long-term community impact.",
   },
-   {
-    id:6,
-    Title: "Davinchi",
-    img: "/images/gf.webp",
-    video: "",
-    imges: [],
-    stack: [],
-    link:null,
-    status: "Not active",
-    github: "https://github.com/LuckyBaliyan/AI_IMAGE_GENERATOR.git",
-    para:
-      "An AI-powered image generator that creates high-quality visuals quickly and efficiently.",
-    content:
-      "Davinchi is an advanced AI-based image generator that converts text prompts into unique, high-resolution visuals, designed with a focus on performance, reliability, and accessibility. I optimized the system with efficient model handling, asynchronous data flows, and caching to ensure users get results in real time without delays. The platform is fully responsive, featuring a modern and minimal UI that adapts seamlessly across devices, and I implemented lazy loading and error-handling strategies to enhance stability when handling heavy image outputs. This project strengthened my skills in integrating AI models with web applications, managing computationally intensive tasks, and designing systems that remain fast and intuitive under load. More importantly, it allowed me to refine the balance between complex back-end processes and a user-friendly interface. The impact of Davinchi lies in enabling designers, creators, and businesses to generate visuals instantly, making creative workflows faster and more accessible. This project showcases my ability to combine AI, optimization techniques, and polished front-end design into a real-world solution with significant practical value.",
-    Date:'2025'
-  },
   {
-  id: 7,
+  id: 6,
   Title: "OCHI_DESIGN",
   img: "/images/ochi2.png",
   video: "/videos/ochi.mp4",
@@ -434,15 +418,15 @@ const allProjects = [
   Date: "2025"
  },
  {
-  id: 8,
+  id: 7,
   Title: "CineScope",
   img: "/images/movies.jpg",
   video: "/videos/movies.mp4",
   imges: [{img:'/images/movies1.png'},{img:'/images/movies2.png'},{img:'/images/movies3.png'},{img:'/images/movies4.png'}],
   stack: ["React", "Appwrite", "TailwindCSS", "HTML", "REST API"],
-  link: null,
+  link:'https://movies-page-react-01-peev.vercel.app/',
   status: "Active",
-  github: "https://github.com/LuckyBaliyan/react-movie-app.git",
+  github: "https://github.com/LuckyBaliyan/Movies_Page_React_01.git",
   para:
     "A dynamic movie discovery platform powered by Appwrite and REST APIs.",
   content:
@@ -450,37 +434,38 @@ const allProjects = [
   Date: "2025"
   },
   {
-    id:9,
-    Title: "Times Global",
-    img: "/images/m4.webp",
-    Date:'2025',
-    video: "",
-    imges: [],
-    stack: [],
-    link: "https://api-projects-two.vercel.app/",
-    status: "Live",
-    github: "https://github.com/LuckyBaliyan/API_Projects.git",
-    para:
-      "A dynamic news portal with real-time search and smooth user interactions.",
-    content:
-      "Times Now Roman is a modern and interactive news portal designed with a clean, accessible UI/UX and powered by live API integrations using vanilla JavaScript. The platform allows users to instantly search and filter news articles, creating an engaging and responsive reading experience. To make browsing more enjoyable, I implemented smooth scrolling with Lenis and interactive animations using ScrollTrigger, synced seamlessly with the scroll behavior. The portal is fully responsive and optimized for fast data fetching, efficient rendering, and accessibility across devices. While building this project, I gained hands-on experience with API integration, managing asynchronous requests, and designing scalable front-end systems without frameworks. I also learned to fine-tune animations and layouts to keep the platform lightweight while enhancing user engagement. The impact of Times Now Roman lies in making news consumption interactive and fun, whether used for college updates, city-level portals, or larger audiences. This project demonstrates my ability to merge practical information systems with engaging design, showcasing both my technical depth and UI/UX sensibility.",
+  id: 8,
+  Title: "New Reality",
+  img: "/images/neue.webp",
+  video: "/videos/neue.mp4",
+  imges: [{img:'/images/neue.webp'},{img:'/images/neue1.png'},{img:'/images/neue2.png'},{img:'/images/neue3.png'},{img:'/images/neue4.png'}],
+  stack: ["HTML", "CSS", "JavaScript", "GSAP", "Git", "Vercel"],
+  link:'https://brainwave-matrix-intern-tbyg.vercel.app/',
+  status: "Active",
+  github: "https://github.com/LuckyBaliyan/-Brainwave_Matrix_Intern.git",
+  para:
+    "A reimagined landing page for New Reality, a design-based company",
+  content:
+    "New Reality is a creative landing page redesign that combines advanced JavaScript logic with smooth GSAP animations to deliver an engaging, motion-rich experience. I implemented a dynamic image trail effect where images are pushed and unshifted within an array, acting like a real-time buffer that tracks mouse movement and displays visuals with subtle delay — creating a natural trailing motion. The project allowed me to explore complex DOM manipulations, time-based interactions, and performance optimization for fluid motion. I also integrated a theme toggle button for light and dark modes, adding depth to the user interaction. With additional CSS techniques and transitions, the interface feels both futuristic and responsive. This project deepened my expertise in combining animation logic, event-driven behavior, and aesthetic design to craft an immersive and highly interactive landing experience.",
+  Date: "2024"
   },
   {
-    id:10,
-    Title: "Nexa Bridge",
-    img: "/images/pl.jpg",
-    Date:'2025',
-    video: "",
-    imges: [],
-    stack: [],
-    link: "https://nexa-bridge-dun.vercel.app/",
-    status: "under development",
-    github: "https://github.com/LuckyBaliyan/NexaBridge.git",
-    para:
-      "An alumni-student connectivity platform with mentorship, jobs, and community features.",
-    content:
-      "Nexa Bridge is a feature-rich alumni-student connectivity platform designed to foster meaningful relationships, mentorship, and career opportunities within educational communities. It includes separate dashboards for students, alumni, and administrators, each equipped with tailored functionalities such as mentorship programs, community postings, job and internship boards, donations, chats, and even video calls for real-time interactions. The platform is built to be fully responsive and scalable, capable of handling multiple roles and large user bases without sacrificing performance. In developing Nexa Bridge, I focused on implementing role-based access control, integrating real-time communication tools, and ensuring data security across different modules. I also optimized the system for scalability, enabling smooth communication and interaction even with high traffic. This project significantly improved my ability to design and manage complex full-stack architectures while working on socially impactful features that can bring real-world value. The impact of Nexa Bridge lies in enabling students to seek guidance, alumni to give back, and institutions to maintain strong networks, demonstrating my capability to build systems that combine technical strength with long-term community impact.",
-  }
+  id: 9,
+  Title: "Edu Gaurd",
+  img: "/images/edu.jpeg",
+  video: "/videos/anti.mp4",
+  imges: [{img:'/images/edu1.png'},{img:'/images/edu2.png'},{img:'/images/edu3.png'},{img:'/images/edu4.png'}],
+  stack: ["TypeScript", "React", "HTML", "Tailwind css", "Git","Vercel"],
+  link: 'https://online-exam-anti-cheating-platform.vercel.app/',
+  status: "In Collaboration",
+  github: "https://github.com/LuckyBaliyan/ONLINE_EXAM_ANTI_CHEATING_PLATFORM.git",
+  para:
+    "An AI-powered anti-cheating platform designed to monitor online exams using real-time camera detection and intelligent behavior tracking.",
+  content:
+    "Edu Gaurd is an AI-driven examination monitoring system built collaboratively by a team of four developers. The platform leverages TypeScript and advanced AI models to ensure fair and secure online assessments by detecting cheating behaviors through live camera analysis. It continuously monitors students’ movements and facial activity, flagging suspicious actions in real time. I contributed to developing the front-end interface and integrating TypeScript for type safety and scalability, ensuring a robust and maintainable codebase. The system’s architecture combines AI-based image processing with a responsive web interface, delivering a smooth and reliable user experience during exams. Through this project, I gained valuable experience in teamwork, AI integration, and building scalable, intelligent web applications that enhance academic integrity.",
+  Date: "2024"
+}
+
 ];
 
 const works = [
@@ -500,59 +485,66 @@ const works = [
   },
   {
     id:'1-2',
-    video:'',
-    previewImg:'/images/left-i.jpeg',
+    video:'/videos/anti.mp4',
+    previewImg:'/images/edu.jpeg',
     name:'Project',
-    routes:3,
+    routes:9,
   },
   {
     id:'1-3',
-    video:'',
-    previewImg:'/images/left-i.jpeg',
+    video:'/videos/times.mp4',
+    previewImg:'/images/Times.jpg',
     name:'Project',
     routes:4,
   },
   {
     id:'2-0',
-    video:'',
-    previewImg:'/images/left-i.jpeg',
+    video:'/videos/reimagine.mp4',
+    previewImg:'/images/p4.webp',
     name:'Project',
+    routes:3,
   },
   {
     id:'2-1',
     video:'',
     previewImg:'/images/left-i.jpeg',
-    name:'Project',
+    name:'My Projects',
+    routes:1
   },
   {
     id:'2-2',
-    video:'',
-    previewImg:'/images/left-i.jpeg',
+    video:'/videos/neue.mp4',
+    previewImg:'/images/neue.webp',
     name:'Project',
+    routes:8,
   },
   {
     id:'3-0',
-    video:'',
-    previewImg:'/images/left-i.jpeg',
+    video:'/videos/Nexa.mp4',
+    previewImg:'/images/nexa.jpg',
     name:'Project',
+    routes:5
   },
   {
     id:'3-1',
-    video:'',
-    previewImg:'/images/left-i.jpeg',
+    video:'/videos/movies.mp4',
+    previewImg:'/images/movies.jpg',
     name:'Project',
+    routes:7
   },
   {
     id:'3-2',
-    video:'',
-    previewImg:'/images/left-i.jpeg',
+    video:'/videos/ochi.mp4',
+    previewImg:'/images/ochi2.png',
     name:'Project',
+    routes:6
   },
   {
     id:'3-3',
-    video:'',
-    previewImg:'/images/left-i.jpeg',
+    video:'/videos/times.mp4',
+    previewImg:'/images/Times.jpg',
     name:'Project',
+    routes:9
   }
 ];
 
