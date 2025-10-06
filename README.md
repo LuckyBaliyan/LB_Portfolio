@@ -18,12 +18,14 @@ It combines:
 
 Every animation, hover, and reveal has been crafted to feel deliberate and fluid — turning this portfolio into a **living showcase of creativity and code**.
 
-## Screen Shots
+## 📸 Preview
 
 ## Landing Page
 
 ![Landing Page](public/screenShots/s1.png)
+
 ![Landing Page](public/screenShots/s9.png)
+
 ![Landing Page](public/screenShots/s6.png)
 
 ## Latest Projects
