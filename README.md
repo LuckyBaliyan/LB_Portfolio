@@ -18,6 +18,39 @@ It combines:
 
 Every animation, hover, and reveal has been crafted to feel deliberate and fluid — turning this portfolio into a **living showcase of creativity and code**.
 
+## Screen Shots
+
+## Landing Page
+
+![Landing Page](public/screenShots/s1.png)
+![Landing Page](public/screenShots/s9.png)
+![Landing Page](public/screenShots/s6.png)
+
+## Latest Projects
+
+![Latest Projects](public/screenShots/s8.png)
+
+
+## All Projects
+
+![All Projects](public/screenShots/s7.png)
+
+## Single Project Page
+
+![Project](public/screenShots/s2.png)
+
+## About
+
+![About](public/screenShots/s5.png)
+
+## Footer
+
+![Footer](public/screenShots/s4.png)
+
+## Contacts
+
+![Contact](public/screenShots/s3.png)
+
 ---
 
 ## ✨ Features
@@ -33,46 +66,39 @@ Every animation, hover, and reveal has been crafted to feel deliberate and fluid
 
 ## 🧩 Folder Structure
 
-LB_Portfolio/
-├── public/
-│ └── videos/ # Video assets used for backgrounds or previews
-│
-├── src/
-│ ├── animations/ # All animation utilities & effects
-│ │ ├── cards/
-│ │ ├── pageTransition/
-│ │ ├── Reavel/
-│ │ └── splitText/
-│ │
-│ ├── components/ # Reusable UI components
-│ │ ├── buttons/
-│ │ ├── cards/
-│ │ ├── features/
-│ │ ├── footer/
-│ │ ├── header/
-│ │ └── sections/
-│ │
-│ ├── context/ # Data and state management
-│ │ └── data.js
-│ │
-│ ├── hooks\ lenis/ # Custom React hooks for Lenis scroll control
-│ │ └── useLenis.js
-│ │
-│ ├── layouts/ # Reusable layout wrappers
-│ │ └── MainLayout.jsx
-│ │
-│ ├── pages/ # Main pages of the portfolio
-│ │ ├── About.jsx
-│ │ ├── Contact.jsx
-│ │ ├── Home.jsx
-│ │ ├── Project.jsx
-│ │ └── Works.jsx
-│ │
-│ ├── App.jsx # Main app entry component
-│ ├── Global.css # Global styling overrides
-│ └── main.jsx # React DOM render entry
-│
-└── package.json
+LB_Portfolio/    
+├── public/  
+│ └── videos/  
+├── src/  
+│ ├── animations/  
+│ │ ├── cards/  
+│ │ ├── pageTransition/  
+│ │ ├── Reavel/  
+│ │ └── splitText/  
+│ ├── components/  
+│ │ ├── buttons/  
+│ │ ├── cards/  
+│ │ ├── features/  
+│ │ ├── footer/  
+│ │ ├── header/  
+│ │ └── sections/  
+│ ├── context/  
+│ │ └── data.js  
+│ ├── hooks/  
+│ │ └── lenis/  
+│ │ └── useLenis.js  
+│ ├── layouts/  
+│ │ └── MainLayout.jsx  
+│ ├── pages/  
+│ │ ├── About.jsx  
+│ │ ├── Contact.jsx  
+│ │ ├── Home.jsx  
+│ │ ├── Project.jsx  
+│ │ └── Works.jsx  
+│ ├── App.jsx  
+│ ├── Global.css  
+│ └── main.jsx  
+└── package.json 
 
 ---
 
