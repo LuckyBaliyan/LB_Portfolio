@@ -129,6 +129,6 @@ Want to collaborate or discuss design and motion ideas?
 
 💼 LinkedIn: https://www.linkedin.com/in/lucky-baliyan-67b487299/
 
-🐙 GitHub: github.com/luckybaliyan
+🐙 GitHub: https://github.com/LuckyBaliyan/LB_Portfolio
 
 
